@@ -1,25 +1,24 @@
 {
-	"name": "template",
+	"name": "html-elements-test-page",
 	"version": "1.0.0",
-	"description": "My repository template.",
+	"description": "A page filled with common HTML elements to be used for testing purposes.",
 	"keywords": [
-		"template",
-		"repository",
-		"template-project",
-		"repository-template",
-		"repo-template",
-		"template-repository"
+		"HTML",
+		"HTML5",
+		"html-elements",
+		"test-html",
+		"html-test"
 	],
-	"homepage": "https://github.com/germanfrelo/template#readme",
+	"homepage": "https://github.com/germanfrelo/html-elements-test-page#readme",
 	"bugs": {
-		"url": "https://github.com/germanfrelo/template/issues"
+		"url": "https://github.com/germanfrelo/html-elements-test-page/issues"
 	},
 	"license": "ISC",
 	"author": "Germán Freixinós López",
 	"main": "index.html",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/germanfrelo/template.git"
+		"url": "https://github.com/germanfrelo/html-elements-test-page.git"
 	},
 	"scripts": {
 		"lint:css": "npx stylelint \"**/*.css\" --formatter verbose"

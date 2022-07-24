@@ -1,3 +1,5 @@
-# template
+# html-elements-test-page
 
-My repository template.
+**Note: this is a WIP (work in progress) project.**
+
+A page filled with common HTML elements to be used for testing purposes.

@@ -1,0 +1,37 @@
+{
+	"name": "template",
+	"version": "1.0.0",
+	"description": "My repository template.",
+	"keywords": [
+		"template",
+		"repository",
+		"template-project",
+		"repository-template",
+		"repo-template",
+		"template-repository"
+	],
+	"homepage": "https://github.com/germanfrelo/template#readme",
+	"bugs": {
+		"url": "https://github.com/germanfrelo/template/issues"
+	},
+	"license": "ISC",
+	"author": "Germán Freixinós López",
+	"main": "index.html",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/germanfrelo/template.git"
+	},
+	"scripts": {
+		"lint:css": "npx stylelint \"**/*.css\" --formatter verbose"
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"eslint": "8.20.0",
+		"eslint-config-prettier": "8.5.0",
+		"prettier": "2.7.1",
+		"stylelint": "14.9.1",
+		"stylelint-config-prettier": "9.0.3",
+		"stylelint-config-recess-order": "3.0.0",
+		"stylelint-config-standard": "26.0.0"
+	}
+}

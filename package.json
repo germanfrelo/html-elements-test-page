@@ -3,9 +3,10 @@
 	"version": "1.0.0",
 	"description": "A page filled with common HTML elements to be used for testing purposes.",
 	"keywords": [
-		"HTML",
-		"HTML5",
+		"html",
+		"html5",
 		"html-elements",
+		"elements-html",
 		"test-html",
 		"html-test"
 	],

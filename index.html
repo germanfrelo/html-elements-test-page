@@ -8,23 +8,48 @@
 	</head>
 
 	<style>
+		.flow > * {
+			margin-block: 0;
+		}
+
+		.flow > * + * {
+			margin-block-start: 1.5em;
+		}
+
+		.intro {
+			padding: 1em;
+			background-color: hsl(210deg 100% 50% / 10%);
+			border: 0.125rem solid;
+			border-radius: 0.125em;
+		}
+
 		.heading {
-			padding: 0.25em 0.5em;
-			text-align: center;
+			padding-block: 0.25em;
+			padding-inline: 0.75rem;
+			line-height: 1;
 		}
 
 		.category-name {
+			margin-block-start: 4rem;
+			font-size: 2rem;
 			color: white;
-			background-color: rebeccapurple;
+			background-color: #222;
 		}
 
 		.element-container {
-			/* background-color: bisque; */
+			border: 0.0625rem solid #ccc;
 		}
 
 		.element-name {
-			columns: black;
-			background-color: peachpuff;
+			margin-block: 0;
+			font-size: 1.25rem;
+			color: #222;
+			background-color: #eee;
+			border-block-end: 0.0625rem solid #ccc;
+		}
+
+		.element {
+			/* padding: 1rem; */
 		}
 
 		.element-type > label {
@@ -34,9 +59,9 @@
 	</style>
 
 	<body>
-		<div>
-			<h1>HTML elements test page</h1>
+		<h1>HTML elements test page</h1>
 
+		<div class="intro flow">
 			<p>
 				This is a test page filled with common HTML elements. Its main purpose
 				is to be used to provide visual feedback whilst building CSS systems and
@@ -64,7 +89,6 @@
 			</ul>
 
 			<nav>
-				<h2>Table of contents</h2>
 				<details>
 					<summary>Table of contents</summary>
 					<ul>
@@ -302,7 +326,7 @@
 
 		<!-- Sections -->
 
-		<section id="sections" class="category">
+		<section id="sections" class="category flow">
 			<h2 class="heading category-name">Sections</h2>
 
 			<!-- h1, h2, h3, h4, h5, h6 -->
@@ -339,7 +363,7 @@
 
 		<!-- Grouping content -->
 
-		<section id="grouping-content" class="category">
+		<section id="grouping-content" class="category flow">
 			<h2 class="heading category-name">Grouping content</h2>
 
 			<!-- p -->
@@ -531,7 +555,7 @@ A leaflet.
 
 		<!-- Text-level semantics -->
 
-		<section id="text-level-semantics" class="category">
+		<section id="text-level-semantics" class="category flow">
 			<h2 class="heading category-name">Text-level semantics</h2>
 
 			<!-- a -->
@@ -884,7 +908,7 @@ A leaflet.
 
 		<!-- Edits -->
 
-		<section id="edits" class="category">
+		<section id="edits" class="category flow">
 			<h2 class="heading category-name">Edits</h2>
 
 			<!-- del, ins -->
@@ -904,7 +928,7 @@ A leaflet.
 
 		<!-- Embedded content -->
 
-		<section id="embedded-content" class="category">
+		<section id="embedded-content" class="category flow">
 			<h2 class="heading category-name">Embedded content</h2>
 
 			<!-- picture -->
@@ -1080,7 +1104,7 @@ A leaflet.
 
 		<!-- Tabular data -->
 
-		<section id="tabular-data" class="category">
+		<section id="tabular-data" class="category flow">
 			<h2 class="heading category-name">Tabular data</h2>
 
 			<!-- table -->
@@ -1143,7 +1167,7 @@ A leaflet.
 
 		<!-- Forms -->
 
-		<section id="forms" class="category">
+		<section id="forms" class="category flow">
 			<h2 class="heading category-name">Forms</h2>
 
 			<!-- fieldset, legend -->
@@ -1689,7 +1713,7 @@ A leaflet.
 
 		<!-- Interactive elements -->
 
-		<section id="interactive-elements" class="category">
+		<section id="interactive-elements" class="category flow">
 			<h2 class="heading category-name">Interactive elements</h2>
 
 			<!-- details -->
@@ -1744,7 +1768,7 @@ A leaflet.
 
 		<!-- Scripting -->
 
-		<section id="scripting" class="category">
+		<section id="scripting" class="category flow">
 			<h2 class="heading category-name">Scripting</h2>
 
 			<!-- canvas -->

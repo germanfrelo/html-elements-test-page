@@ -1,14 +1,20 @@
-# Local .editorconfig file
+# https://editorconfig.org
 
-# This file should only include settings that affect the physical contents of the file, not just how it appears in an editor.
-# Do not include personal preference presentation settings like a tab's `indent_size` in this file; those should be specified in a parent .editorconfig file outside of the repository.
+# Top-most EditorConfig file
+root = true
 
-# Ensure that personal preference presentation settings can be inherited from parent .editorconfig files.
-root = false
-
+# All files
 [*]
 charset = utf-8
 end_of_line = lf
 insert_final_newline = true
 trim_trailing_whitespace = true
 indent_style = tab
+
+# YAML files
+[*.{yaml,yml}]
+# Tab characters must not be used in indentation:
+# - https://yaml.org/faq.html
+# - https://yaml.org/spec/1.2.2/#61-indentation-spaces
+indent_style = space
+indent_size = 2

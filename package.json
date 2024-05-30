@@ -28,6 +28,9 @@
 		"format:check": "prettier --check .",
 		"prepare": "husky"
 	},
+	"lint-staged": {
+		"*": "prettier --write --ignore-unknown"
+	},
 	"devDependencies": {
 		"husky": "9.0.11",
 		"lint-staged": "15.2.5",

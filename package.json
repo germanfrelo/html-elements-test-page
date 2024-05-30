@@ -25,9 +25,15 @@
 	"main": "",
 	"scripts": {
 		"format": "prettier --write .",
-		"format:check": "prettier --check ."
+		"format:check": "prettier --check .",
+		"prepare": "husky"
+	},
+	"lint-staged": {
+		"*": "prettier --write --ignore-unknown"
 	},
 	"devDependencies": {
+		"husky": "9.0.11",
+		"lint-staged": "15.2.5",
 		"prettier": "3.2.5"
 	}
 }

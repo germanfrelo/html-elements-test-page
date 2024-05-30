@@ -25,7 +25,8 @@
 	"main": "",
 	"scripts": {
 		"format": "prettier --write .",
-		"format:check": "prettier --check ."
+		"format:check": "prettier --check .",
+		"prepare": "husky"
 	},
 	"devDependencies": {
 		"husky": "9.0.11",

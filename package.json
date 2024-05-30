@@ -1,6 +1,7 @@
 {
 	"name": "html-elements-test-page",
 	"version": "1.0.0",
+	"private": true,
 	"description": "A page filled with common HTML elements to be used for testing purposes.",
 	"keywords": [
 		"html",
@@ -14,13 +15,14 @@
 	"bugs": {
 		"url": "https://github.com/germanfrelo/html-elements-test-page/issues"
 	},
-	"license": "ISC",
-	"author": "Germán Freixinós López",
-	"main": "index.html",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/germanfrelo/html-elements-test-page.git"
 	},
+	"license": "ISC",
+	"author": "Germán Freixinós López",
+	"type": "module",
+	"main": "",
 	"scripts": {
 		"format": "prettier --write .",
 		"format:check": "prettier --check ."

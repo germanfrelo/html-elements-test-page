@@ -5,6 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>HTML elements test page</title>
 		<meta name="color-scheme" content="light dark" />
+		<link id="stylesheet" rel="stylesheet" href="" />
 	</head>
 
 	<style>
@@ -14,6 +15,17 @@
 
 		.flow > * + * {
 			margin-block-start: 1.5em;
+		}
+
+		.stack {
+			display: flex;
+			flex-direction: column;
+			row-gap: var(--stack-gap, 0.5em);
+			align-items: flex-start;
+		}
+
+		.stack > * {
+			margin-block: 0;
 		}
 
 		.intro {
@@ -58,6 +70,13 @@
 		}
 	</style>
 
+	<script>
+		function loadStyleSheet(href = "") {
+			const styleSheetLink = document.querySelector("#stylesheet");
+			styleSheetLink.setAttribute("href", href);
+		}
+	</script>
+
 	<body>
 		<h1>HTML elements test page</h1>
 
@@ -76,6 +95,14 @@
 				</li>
 				<li><a href="https://github.com/xz/elements">@xz's xz/elements</a></li>
 			</ul>
+
+			<fieldset>
+				<legend>Compare Style Sheets</legend>
+				<ul class="stack">
+					<li><button onclick="loadStyleSheet('')">Default Browser Styles</button> (<a href="https://meiert.com/en/blog/user-agent-style-sheets/">see source</a>)</li>
+					<li><button onclick="loadStyleSheet('https://germanfrelo.github.io/base-css-stylesheet/base.css')">My Base Styles</button> (<a href="https://github.com/germanfrelo/base-css-stylesheet/blob/main/base.css">see source</a>)</li>
+				</ul>
+			</fieldset>
 
 			<nav>
 				<details>

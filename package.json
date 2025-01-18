@@ -19,8 +19,8 @@
 		"type": "git",
 		"url": "https://github.com/germanfrelo/html-elements-test-page.git"
 	},
-	"license": "ISC",
-	"author": "Germán Freixinós López",
+	"license": "MIT",
+	"author": "Germán Freixinós",
 	"type": "module",
 	"main": "",
 	"scripts": {

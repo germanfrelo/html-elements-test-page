@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="gfl-root">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Modern, up-to-date HTML5 Test Page</title>
+		<title>Modern, up-to-date HTML5 Elements Test Page</title>
 		<meta name="description" content="An up-to-date test page filled with common HTML elements to be used to provide visual feedback whilst building CSS systems and frameworks." />
-		<meta name="color-scheme" content="light dark" />
+		<meta name="color-scheme" content="" />
 		<link rel="stylesheet" href="assets/css/index.css" />
 		<link rel="stylesheet" href="" id="customStyleSheet" />
 		<script src="assets/js/index.js"></script>
@@ -13,15 +13,46 @@
 
 	<body>
 		<header>
-			<a href="#content" class="skip-link">Skip to content</a>
+			<a href="#content" class="gfl-skip-link">Skip to content</a>
 
-			<div class="flow">
-				<h1 class="custom-heading">HTML5 Test Page</h1>
+			<div class="gfl-flow">
+				<h1 class="gfl-heading">HTML5 Elements Test Page</h1>
 
 				<!-- Intro -->
-				<div id="intro">
+				<div id="gfl-intro">
 					<p>This is a test page filled with common HTML elements to be used to provide visual feedback whilst building CSS systems and frameworks.</p>
-					<p>These HTMl elements are omitted: <code>html</code>, <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element#document_metadata">document metadata elements</a>, <code>body</code>, <code>main</code>.</p>
+
+					<details>
+						<summary>Omitted HTML elements</summary>
+						<ul>
+							<li><code>html</code></li>
+							<li>
+								Document metadata:
+								<ul>
+									<li><code>base</code></li>
+									<li><code>header</code></li>
+									<li><code>link</code></li>
+									<li><code>meta</code></li>
+									<li><code>style</code></li>
+									<li><code>title</code></li>
+								</ul>
+							</li>
+							<li><code>body</code></li>
+							<li><code>article</code></li>
+							<li><code>section</code></li>
+							<li><code>nav</code></li>
+							<li><code>aside</code></li>
+							<li><code>header</code></li>
+							<li><code>footer</code></li>
+							<li><code>main</code></li>
+							<li><code>div</code></li>
+							<li><code>script</code></li>
+							<li><code>noscript</code></li>
+							<li><code>template</code></li>
+							<li><code>slot</code></li>
+						</ul>
+					</details>
+
 					<p>It's based on <a target="_blank" href="https://github.com/cbracco/html5-test-page">@cbracco's HTML5 Test Page</a>, but with some improvements:</p>
 					<ul>
 						<li>It's more complete.</li>
@@ -29,19 +60,18 @@
 						<li>Includes references to MDN and the HTML Spec.</li>
 						<li>
 							Elements are grouped and sorted based on the references from
-							<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">MDN</a>
-							and
-							<a target="_blank" href="https://html.spec.whatwg.org/multipage/#toc-semantics">HTML Spec</a>, with custom styles to better differentiate every category and element.
+							<!-- <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">MDN</a>
+							and -->
+							<a target="_blank" href="https://html.spec.whatwg.org/multipage/#toc-semantics">the HTML Spec</a>, with custom styles to better differentiate every category and element.
 						</li>
 						<li>A button to switch between light and dark color scheme.</li>
-						<li>You can compare different style sheets.</li>
 					</ul>
 				</div>
 
 				<!-- Navigation: Table of Contents -->
 				<details>
 					<summary>Table of contents</summary>
-					<nav aria-label="Main Navigation">
+					<nav aria-label="Main Navigation" id="gfl-toc">
 						<ol>
 							<li>
 								<a href="#sections">Sections and Headings</a>
@@ -89,9 +119,6 @@
 									</li>
 									<li>
 										<a href="#search"><code>search</code></a>
-									</li>
-									<li>
-										<a href="#div"><code>div</code></a>
 									</li>
 								</ul>
 							</li>
@@ -375,12 +402,12 @@
 
 		<main id="content" tabindex="-1">
 			<!-- Sections -->
-			<div id="sections" class="category-container">
-				<h2 class="custom-heading category-name">Sections and Headings</h2>
+			<div id="sections" class="gfl-category-container">
+				<h2 class="gfl-heading gfl-category-name">Sections and Headings</h2>
 
 				<!-- h1, h2, h3, h4, h5, h6 -->
-				<div id="headings" class="element-container">
-					<h3 class="custom-heading element-name">
+				<div id="headings" class="gfl-element-container">
+					<h3 class="gfl-heading element-name">
 						<span><code>&lt;h1&gt;</code>–<code>&lt;h6&gt;</code>: Section Headings</span>
 						<small>(<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements">MDN</a>)</small>
 					</h3>
@@ -394,48 +421,52 @@
 						<h6>Heading 6</h6>
 					</div>
 
-					<h4 class="custom-heading element-name">
+					<h4 class="gfl-heading element-name">
 						<span>Nested <code>&lt;h1&gt;</code> element within <code>&lt;article|aside|nav|section&gt;</code> elements</span>
 						<small>(<a target="_blank" href="https://html.spec.whatwg.org/multipage/rendering.html#sections-and-headings">HTML Spec Rendering</a>)</small>
 					</h4>
 
 					<div class="element">
-						<article>
-							<h1>&lt;h1&gt; nested within &lt;article&gt; one time</h1>
-							<article>
-								<h1>&lt;h1&gt; nested within &lt;article&gt; two times</h1>
-								<article>
-									<h1>&lt;h1&gt; nested within &lt;article&gt; three times</h1>
-									<article>
-										<h1>&lt;h1&gt; nested within &lt;article&gt; four times</h1>
-										<article>
-											<h1>&lt;h1&gt; nested within &lt;article&gt; five times</h1>
-										</article>
-									</article>
-								</article>
-							</article>
-						</article>
+						<h1>h1 not nested</h1>
+						<section>
+							<h1>h1 nested within section one time</h1>
+							<section>
+								<h1>h1 nested within section two times</h1>
+								<section>
+									<h1>h1 nested within section three times</h1>
+									<section>
+										<h1>h1 nested within section four times</h1>
+										<section>
+											<h1>h1 nested within section five times</h1>
+										</section>
+									</section>
+								</section>
+							</section>
+						</section>
 					</div>
 				</div>
 
+				<hr class="gfl-separator-elements" />
+
 				<!-- hgroup -->
-				<div id="hgroup" class="element-container">
-					<h3 class="custom-heading element-name">
+				<div id="hgroup" class="gfl-element-container">
+					<h3 class="gfl-heading element-name">
 						<span><code>&lt;hgroup&gt;</code>: Heading Group</span>
 						<small>(<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hgroup">MDN</a>, <a target="_blank" href="https://html.spec.whatwg.org/multipage/sections.html#the-hgroup-element">HTML&nbsp;Spec</a>)</small>
 					</h3>
 					<div class="element">
 						<hgroup>
-							<h1>Frankenstein</h1>
-							<p>Or: The Modern Prometheus</p>
+							<h1>Heading</h1>
+							<p>Related content such as subheading, alternative title, or tagline</p>
 						</hgroup>
-						<p>Victor Frankenstein, a Swiss scientist, has a great ambition: to create intelligent life. But when his creature first stirs, he realizes he has made a monster. A monster which, abandoned by his master and shunned by everyone who sees it, follows Dr Frankenstein to the very ends of the earth.</p>
 					</div>
 				</div>
 
+				<hr class="gfl-separator-elements" />
+
 				<!-- address -->
-				<div id="address" class="element-container">
-					<h3 class="custom-heading element-name">
+				<div id="address" class="gfl-element-container">
+					<h3 class="gfl-heading element-name">
 						<span><code>&lt;address&gt;</code>: Contact Address</span>
 						<small>(<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/address">MDN</a>, <a target="_blank" href="https://html.spec.whatwg.org/multipage/sections.html#the-address-element">HTML&nbsp;Spec</a>)</small>
 					</h3>
@@ -450,23 +481,32 @@
 			</div>
 
 			<!-- Grouping content -->
-			<div id="grouping-content" class="category-container">
-				<h2 class="custom-heading category-name">Grouping content</h2>
+			<div id="grouping-content" class="gfl-category-container">
+				<h2 class="gfl-heading gfl-category-name">Grouping content</h2>
 
 				<!-- p -->
-				<div id="p" class="element-container">
-					<h3 class="custom-heading element-name">
-						<span><code>&lt;p&gt;</code>: Paragraph</span>
-						<small>(<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p">MDN</a>)</small>
-					</h3>
+				<div id="p" class="gfl-element-container">
+					<div class="gfl-element-header">
+						<h3 class="gfl-heading element-name"><code>&lt;p&gt;</code>: Paragraph</h3>
+						<ul role="list">
+							<li>
+								<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p">MDN</a>
+							</li>
+							<li>
+								<a target="_blank" href="https://html.spec.whatwg.org/multipage/grouping-content.html#the-p-element">Spec</a>
+							</li>
+						</ul>
+					</div>
 					<div class="element">
 						<p>The <code>&lt;p&gt;</code> HTML element represents a paragraph. Paragraphs are usually represented in visual media as blocks of text separated from adjacent blocks by blank lines and/or first-line indentation, but HTML paragraphs can be any structural grouping of related content, such as images or form fields.</p>
 					</div>
 				</div>
 
+				<hr class="gfl-separator-elements" />
+
 				<!-- hr -->
-				<div id="hr" class="element-container">
-					<h3 class="custom-heading element-name">
+				<div id="hr" class="gfl-element-container">
+					<h3 class="gfl-heading element-name">
 						<span><code>&lt;hr&gt;</code>: Thematic Break (Horizontal Rule)</span>
 						<small>(<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hr">MDN</a>)</small>
 					</h3>
@@ -475,9 +515,11 @@
 					</div>
 				</div>
 
+				<hr class="gfl-separator-elements" />
+
 				<!-- pre -->
-				<div id="pre" class="element-container">
-					<h3 class="custom-heading element-name">
+				<div id="pre" class="gfl-element-container">
+					<h3 class="gfl-heading element-name">
 						<span><code>&lt;pre&gt;</code>: Preformatted Text</span>
 						<small>(<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre">MDN</a>)</small>
 					</h3>
@@ -505,32 +547,34 @@
 						<pre><code>pre {
 	display: block;
 	font-family: monospace;
-	white-space-collapse: preserve;
-	text-wrap: nowrap;
-	margin: 1em 0px;
+	unicode-bidi: isolate;
+	white-space: pre;
+	margin-block: 1em;
 }
 </code></pre>
 					</div>
 				</div>
 
+				<hr class="gfl-separator-elements" />
+
 				<!-- blockquote -->
-				<div id="blockquote" class="element-container">
-					<h3 class="custom-heading element-name">
+				<div id="blockquote" class="gfl-element-container">
+					<h3 class="gfl-heading element-name">
 						<span><code>&lt;blockquote&gt;</code>: Block Quotation</span>
 						<small>(<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">MDN</a>)</small>
 					</h3>
 					<div class="element">
-						<blockquote cite="https://en.wikipedia.org/wiki/Block_quotation">
-							<p>A block quotation (also known as a long quotation or extract) is a quotation in a written document, that is set off from the main text as a paragraph, or block of text.</p>
-							<p>It is typically distinguished visually using indentation and a different typeface or smaller size quotation. It may or may not include a citation, usually placed at the bottom.</p>
-							<cite><a href="#!">Said no one, ever.</a></cite>
+						<blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+							The <strong><code>&lt;blockquote&gt;</code></strong> HTML element indicates that the enclosed text is an extended quotation. Usually, this is rendered visually by indentation […]. A URL for the source of the quotation may be given using the <code>cite</code> attribute, while a text representation of the source can be given using the <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/cite"><code>&lt;cite&gt;</code></a> element.
 						</blockquote>
 					</div>
 				</div>
 
+				<hr class="gfl-separator-elements" />
+
 				<!-- ol -->
-				<div id="ol" class="element-container">
-					<h3 class="custom-heading element-name">
+				<div id="ol" class="gfl-element-container">
+					<h3 class="gfl-heading element-name">
 						<span><code>&lt;ol&gt;</code>: Ordered List</span>
 						<small>(<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol">MDN</a>)</small>
 					</h3>
@@ -571,9 +615,11 @@
 					</div>
 				</div>
 
+				<hr class="gfl-separator-elements" />
+
 				<!-- ul -->
-				<div id="ul" class="element-container">
-					<h3 class="custom-heading element-name">
+				<div id="ul" class="gfl-element-container">
+					<h3 class="gfl-heading element-name">
 						<span><code>&lt;ul&gt;</code>: Unordered List</span>
 						<small>(<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul">MDN</a>)</small>
 					</h3>
@@ -588,21 +634,7 @@
 										List Item 2
 										<ul>
 											<li>List Item 1</li>
-											<li>
-												List Item 2
-												<ul>
-													<li>List Item 1</li>
-													<li>
-														List Item 2
-														<ul>
-															<li>List Item 1</li>
-															<li>List Item 2</li>
-															<li>List Item 3</li>
-														</ul>
-													</li>
-													<li>List Item 3</li>
-												</ul>
-											</li>
+											<li>List Item 2</li>
 											<li>List Item 3</li>
 										</ul>
 									</li>
@@ -614,9 +646,27 @@
 					</div>
 				</div>
 
+				<hr class="gfl-separator-elements" />
+
+				<!-- menu -->
+				<div id="menu" class="gfl-element-container">
+					<h3 class="gfl-heading element-name">
+						<span><code>&lt;menu&gt;</code>: Menu</span>
+						<small>(<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menu">MDN</a>)</small>
+					</h3>
+					<div class="element">
+						<menu>
+							<li><button id="save">Save for later</button></li>
+							<li><button id="share">Share this news</button></li>
+						</menu>
+					</div>
+				</div>
+
+				<hr class="gfl-separator-elements" />
+
 				<!-- dl -->
-				<div id="dl" class="element-container">
-					<h3 class="custom-heading element-name">
+				<div id="dl" class="gfl-element-container">
+					<h3 class="gfl-heading element-name">
 						<span><code>&lt;dl&gt;</code>: Description List</span>
 						<small>(<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl">MDN</a>)</small>
 					</h3>
@@ -632,9 +682,11 @@
 					</div>
 				</div>
 
+				<hr class="gfl-separator-elements" />
+
 				<!-- figure -->
-				<div id="figure" class="element-container">
-					<h3 class="custom-heading element-name">
+				<div id="figure" class="gfl-element-container">
+					<h3 class="gfl-heading element-name">
 						<span><code>&lt;figure&gt;</code> & <code>&lt;figcaption&gt;</code>: Figure with Optional Caption</span>
 						<small>(<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure">MDN</a>)</small>
 					</h3>
@@ -645,15 +697,32 @@
 						</figure>
 					</div>
 				</div>
+
+				<!-- search -->
+				<div id="search" class="gfl-element-container">
+					<h3 class="gfl-heading element-name">
+						<span><code>&lt;search&gt;</code>: Search</span>
+						<small>(<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/search">MDN</a>)</small>
+					</h3>
+					<div class="element">
+						<search>
+							<form action="">
+								<label for="product">Find a product</label>
+								<input type="search" id="product" name="q" />
+								<button type="button">Search</button>
+							</form>
+						</search>
+					</div>
+				</div>
 			</div>
 
 			<!-- Text-level semantics -->
-			<div id="text-level-semantics" class="category-container">
-				<h2 class="custom-heading category-name">Text-level semantics</h2>
+			<div id="text-level-semantics" class="gfl-category-container">
+				<h2 class="gfl-heading gfl-category-name">Text-level semantics</h2>
 
 				<!-- a -->
-				<div id="a" class="element-container">
-					<h3 class="custom-heading element-name">
+				<div id="a" class="gfl-element-container">
+					<h3 class="gfl-heading element-name">
 						<span><code>&lt;a&gt;</code>: Anchor</span>
 						<small>(<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a">MDN</a>)</small>
 					</h3>
@@ -662,9 +731,11 @@
 					</div>
 				</div>
 
+				<hr class="gfl-separator-elements" />
+
 				<!-- em -->
-				<div id="em" class="element-container">
-					<h3 class="custom-heading element-name">
+				<div id="em" class="gfl-element-container">
+					<h3 class="gfl-heading element-name">
 						<span><code>&lt;em&gt;</code>: Emphasis</span>
 						<small>(<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em">MDN</a>)</small>
 					</h3>
@@ -673,9 +744,11 @@
 					</div>
 				</div>
 
+				<hr class="gfl-separator-elements" />
+
 				<!-- strong -->
-				<div id="strong" class="element-container">
-					<h3 class="custom-heading element-name">
+				<div id="strong" class="gfl-element-container">
+					<h3 class="gfl-heading element-name">
 						<span><code>&lt;strong&gt;</code>: Strong Importance</span>
 						<small>(<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong">MDN</a>)</small>
 					</h3>
@@ -684,9 +757,11 @@
 					</div>
 				</div>
 
+				<hr class="gfl-separator-elements" />
+
 				<!-- small -->
-				<div id="small" class="element-container">
-					<h3 class="custom-heading element-name">
+				<div id="small" class="gfl-element-container">
+					<h3 class="gfl-heading element-name">
 						<span><code>&lt;small&gt;</code>: Side Comment</span>
 						<small>(<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/small">MDN</a>)</small>
 					</h3>
@@ -703,9 +778,11 @@
 					</div>
 				</div>
 
+				<hr class="gfl-separator-elements" />
+
 				<!-- s -->
-				<div id="s" class="element-container">
-					<h3 class="custom-heading element-name">
+				<div id="s" class="gfl-element-container">
+					<h3 class="gfl-heading element-name">
 						<span><code>&lt;s&gt;</code>: Strikethrough</span>
 						<small>(<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/s">MDN</a>)</small>
 					</h3>
@@ -714,9 +791,11 @@
 					</div>
 				</div>
 
+				<hr class="gfl-separator-elements" />
+
 				<!-- cite -->
-				<div id="cite" class="element-container">
-					<h3 class="custom-heading element-name">
+				<div id="cite" class="gfl-element-container">
+					<h3 class="gfl-heading element-name">
 						<span><code>&lt;cite&gt;</code>: Citation</span>
 						<small>(<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/cite">MDN</a>)</small>
 					</h3>
@@ -725,38 +804,44 @@
 					</div>
 				</div>
 
+				<hr class="gfl-separator-elements" />
+
 				<!-- q -->
-				<div id="q" class="element-container">
-					<h3 class="custom-heading element-name">
+				<div id="q" class="gfl-element-container">
+					<h3 class="gfl-heading element-name">
 						<span><code>&lt;q&gt;</code>: Inline Quotation</span>
 						<small>(<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">MDN</a>)</small>
 					</h3>
 					<div class="element">
-						<p>
-							Jeremy Keith said:
-							<q cite="https://adactio.com/divs/11481#:~:text=you%20could%20open%20an%20HTML%20document%20from%20back%20then%20in%20a%20browser%20today">You could open an HTML document from back then in a browser today</q>.
+						<p lang="en">
+							Eric A. Meyer said:
+							<q cite="https://github.com/jensimmons/cssremedy/issues/17#issuecomment-463297864">“Because that’s what Mosaic did” is exactly the kind of reasoning I believe cssremedy is trying to leave behind.</q>
 						</p>
 						<p lang="fr">
 							Antoine de Saint-Exupéry a dit :
-							<q cite="https://www.superprof.es/blog/citas-y-proverbios-de-la-lengua-francesa/#:~:text=%E2%80%9C-,On%20ne%20voit%20bien%20qu%E2%80%99avec%20le%20coeur.%20L%E2%80%99essentiel%20est%20invisible%20pour%20les%20yeux.,-%E2%80%9D">On ne voit bien qu’avec le cœur. L’essentiel est invisible pour les yeux</q>.
+							<q cite="https://www.superprof.es/blog/citas-y-proverbios-de-la-lengua-francesa/#:~:text=%E2%80%9C-,On%20ne%20voit%20bien%20qu%E2%80%99avec%20le%20coeur.%20L%E2%80%99essentiel%20est%20invisible%20pour%20les%20yeux.,-%E2%80%9D">On ne voit bien qu’avec le cœur. L’essentiel est invisible pour les yeux</q>
 						</p>
 					</div>
 				</div>
 
+				<hr class="gfl-separator-elements" />
+
 				<!-- dfn -->
-				<div id="dfn" class="element-container">
-					<h3 class="custom-heading element-name">
+				<div id="dfn" class="gfl-element-container">
+					<h3 class="gfl-heading element-name">
 						<span><code>&lt;dfn&gt;</code>: Definition</span>
 						<small>(<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dfn">MDN</a>)</small>
 					</h3>
 					<div class="element">
-						<p>The HTML Definition element (<dfn>&lt;dfn&gt;</dfn>) is used to indicate the term being defined within the context of a definition phrase or sentence.</p>
+						<p>The <dfn>&lt;dfn&gt;</dfn> HTML element indicates a term to be defined.</p>
 					</div>
 				</div>
 
+				<hr class="gfl-separator-elements" />
+
 				<!-- abbr -->
-				<div id="abbr" class="element-container">
-					<h3 class="custom-heading element-name">
+				<div id="abbr" class="gfl-element-container">
+					<h3 class="gfl-heading element-name">
 						<span><code>&lt;abbr&gt;</code>: Abbreviation</span>
 						<small>(<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/abbr">MDN</a>)</small>
 					</h3>
@@ -765,9 +850,11 @@
 					</div>
 				</div>
 
+				<hr class="gfl-separator-elements" />
+
 				<!-- ruby -->
-				<div id="ruby" class="element-container">
-					<h3 class="custom-heading element-name">
+				<div id="ruby" class="gfl-element-container">
+					<h3 class="gfl-heading element-name">
 						<span><code>&lt;ruby&gt;</code>: Ruby Annotation</span>
 						<small>(<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ruby">MDN</a>)</small>
 					</h3>
@@ -783,9 +870,11 @@
 					</div>
 				</div>
 
+				<hr class="gfl-separator-elements" />
+
 				<!-- time -->
-				<div id="time" class="element-container">
-					<h3 class="custom-heading element-name">
+				<div id="time" class="gfl-element-container">
+					<h3 class="gfl-heading element-name">
 						<span><code>&lt;time&gt;</code>: (Date) Time</span>
 						<small>(<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time">MDN</a>)</small>
 					</h3>
@@ -817,45 +906,52 @@
 					</div>
 				</div>
 
+				<hr class="gfl-separator-elements" />
+
 				<!-- code -->
-				<div id="code" class="element-container">
-					<h3 class="custom-heading element-name">
+				<div id="code" class="gfl-element-container">
+					<h3 class="gfl-heading element-name">
 						<span><code>&lt;code&gt;</code>: Inline Code</span>
 						<small>(<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code">MDN</a>)</small>
 					</h3>
 					<div class="element">
-						<p>Lorem ipsum <code>&lt;code&gt;</code> sit amet</p>
+						<p>The <code>&lt;code&gt;</code> HTML element displays its contents styled in a fashion intended to indicate that the text is a short fragment of computer code.</p>
 					</div>
 				</div>
 
+				<hr class="gfl-separator-elements" />
+
 				<!-- var -->
-				<div id="var" class="element-container">
-					<h3 class="custom-heading element-name">
+				<div id="var" class="gfl-element-container">
+					<h3 class="gfl-heading element-name">
 						<span><code>&lt;var&gt;</code>: Variable</span>
 						<small>(<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/var">MDN</a>)</small>
 					</h3>
 					<div class="element">
-						<p>The <var>variable element</var>, such as <var>x</var> = <var>y</var>.</p>
+						<p><var>x</var> + <var>y</var> = <var>z</var></p>
 					</div>
 				</div>
 
+				<hr class="gfl-separator-elements" />
+
 				<!-- samp -->
-				<div id="samp" class="element-container">
-					<h3 class="custom-heading element-name">
+				<div id="samp" class="gfl-element-container">
+					<h3 class="gfl-heading element-name">
 						<span><code>&lt;samp&gt;</code>: Sample Output</span>
 						<small>(<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/samp">MDN</a>)</small>
 					</h3>
 					<div class="element">
-						<div>
-							I was trying to boot my computer, but I got this hilarious message:<br />
+						<p>
 							<samp>Keyboard not found. Press F1 to continue.</samp>
-						</div>
+						</p>
 					</div>
 				</div>
 
+				<hr class="gfl-separator-elements" />
+
 				<!-- kbd -->
-				<div id="kbd" class="element-container">
-					<h3 class="custom-heading element-name">
+				<div id="kbd" class="gfl-element-container">
+					<h3 class="gfl-heading element-name">
 						<span><code>&lt;kbd&gt;</code>: Keyboard Input</span>
 						<small>(<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/kbd">MDN</a>)</small>
 					</h3>
@@ -881,9 +977,11 @@
 					</div>
 				</div>
 
+				<hr class="gfl-separator-elements" />
+
 				<!-- sub -->
-				<div id="sub" class="element-container">
-					<h3 class="custom-heading element-name">
+				<div id="sub" class="gfl-element-container">
+					<h3 class="gfl-heading element-name">
 						<span><code>&lt;sub&gt;</code>: Subscript</span>
 						<small>(<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/sub">MDN</a>)</small>
 					</h3>
@@ -897,9 +995,11 @@
 					</div>
 				</div>
 
+				<hr class="gfl-separator-elements" />
+
 				<!-- sup -->
-				<div id="sup" class="element-container">
-					<h3 class="custom-heading element-name">
+				<div id="sup" class="gfl-element-container">
+					<h3 class="gfl-heading element-name">
 						<span><code>&lt;sup&gt;</code>: Superscript</span>
 						<small>(<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/sup">MDN</a>)</small>
 					</h3>
@@ -910,9 +1010,11 @@
 					</div>
 				</div>
 
+				<hr class="gfl-separator-elements" />
+
 				<!-- i -->
-				<div id="i" class="element-container">
-					<h3 class="custom-heading element-name">
+				<div id="i" class="gfl-element-container">
+					<h3 class="gfl-heading element-name">
 						<span><code>&lt;i&gt;</code>: Idiomatic Text</span>
 						<small>(<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/i">MDN</a>)</small>
 					</h3>
@@ -921,9 +1023,11 @@
 					</div>
 				</div>
 
+				<hr class="gfl-separator-elements" />
+
 				<!-- b -->
-				<div id="b" class="element-container">
-					<h3 class="custom-heading element-name">
+				<div id="b" class="gfl-element-container">
+					<h3 class="gfl-heading element-name">
 						<span><code>&lt;b&gt;</code>: Bring Attention To</span>
 						<small>(<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/b">MDN</a>)</small>
 					</h3>
@@ -932,9 +1036,11 @@
 					</div>
 				</div>
 
+				<hr class="gfl-separator-elements" />
+
 				<!-- u -->
-				<div id="u" class="element-container">
-					<h3 class="custom-heading element-name">
+				<div id="u" class="gfl-element-container">
+					<h3 class="gfl-heading element-name">
 						<span><code>&lt;u&gt;</code>: Unarticulated Annotation (Underline)</span>
 						<small>(<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/u">MDN</a>)</small>
 					</h3>
@@ -943,9 +1049,11 @@
 					</div>
 				</div>
 
+				<hr class="gfl-separator-elements" />
+
 				<!-- mark -->
-				<div id="mark" class="element-container">
-					<h3 class="custom-heading element-name">
+				<div id="mark" class="gfl-element-container">
+					<h3 class="gfl-heading element-name">
 						<span><code>&lt;mark&gt;</code>: Mark Text</span>
 						<small>(<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/mark">MDN</a>)</small>
 					</h3>
@@ -954,9 +1062,11 @@
 					</div>
 				</div>
 
+				<hr class="gfl-separator-elements" />
+
 				<!-- bdi -->
-				<div id="bdi" class="element-container">
-					<h3 class="custom-heading element-name">
+				<div id="bdi" class="gfl-element-container">
+					<h3 class="gfl-heading element-name">
 						<span><code>&lt;bdi&gt;</code>: Bidirectional Isolate</span>
 						<small>(<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/bdi">MDN</a>)</small>
 					</h3>
@@ -966,9 +1076,11 @@
 					</div>
 				</div>
 
+				<hr class="gfl-separator-elements" />
+
 				<!-- bdo -->
-				<div id="bdo" class="element-container">
-					<h3 class="custom-heading element-name">
+				<div id="bdo" class="gfl-element-container">
+					<h3 class="gfl-heading element-name">
 						<span><code>&lt;bdo&gt;</code>: Bidirectional Text Override</span>
 						<small>(<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/bdo">MDN</a>)</small>
 					</h3>
@@ -977,9 +1089,11 @@
 					</div>
 				</div>
 
+				<hr class="gfl-separator-elements" />
+
 				<!-- wbr -->
-				<div id="wbr" class="element-container">
-					<h3 class="custom-heading element-name">
+				<div id="wbr" class="gfl-element-container">
+					<h3 class="gfl-heading element-name">
 						<span><code>&lt;wbr&gt;</code>: Line Break Opportunity</span>
 						<small>(<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/wbr">MDN</a>)</small>
 					</h3>
@@ -992,13 +1106,13 @@
 			</div>
 
 			<!-- Edits -->
-			<div id="edits" class="category-container">
-				<h2 class="custom-heading category-name">Edits</h2>
+			<div id="edits" class="gfl-category-container">
+				<h2 class="gfl-heading gfl-category-name">Edits</h2>
 
 				<!-- del, ins -->
-				<div id="del-ins" class="element-container">
-					<h3 class="custom-heading element-name">
-						<span><code>&lt;del&gt;</code>, <code>&lt;ins&gt;</code>: Deleted and Inserted Text</span>
+				<div id="del-ins" class="gfl-element-container">
+					<h3 class="gfl-heading element-name">
+						<span><code>&lt;del&gt;</code> /<code>&lt;ins&gt;</code>: Deleted & Inserted Text</span>
 						<small>(<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/del">MDN</a>, <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ins">MDN</a>)</small>
 					</h3>
 					<div class="element">
@@ -1008,13 +1122,13 @@
 			</div>
 
 			<!-- Embedded content -->
-			<div id="embedded-content" class="category-container">
-				<h2 class="custom-heading category-name">Embedded content</h2>
+			<div id="embedded-content" class="gfl-category-container">
+				<h2 class="gfl-heading gfl-category-name">Embedded content</h2>
 
 				<!-- picture -->
-				<div id="picture" class="element-container">
-					<h3 class="custom-heading element-name">
-						<span><code>&lt;picture&gt;</code>: Picture</span>
+				<div id="picture" class="gfl-element-container">
+					<h3 class="gfl-heading element-name">
+						<span><code>&lt;picture&gt;</code> (with <code>&lt;source&gt;</code>): Picture</span>
 						<small>(<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture">MDN</a>)</small>
 					</h3>
 					<div class="element">
@@ -1025,9 +1139,11 @@
 					</div>
 				</div>
 
+				<hr class="gfl-separator-elements" />
+
 				<!-- img -->
-				<div id="img" class="element-container">
-					<h3 class="custom-heading element-name">
+				<div id="img" class="gfl-element-container">
+					<h3 class="gfl-heading element-name">
 						<span><code>&lt;img&gt;</code>: Image Embed</span>
 						<small>(<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">MDN</a>)</small>
 					</h3>
@@ -1036,20 +1152,37 @@
 					</div>
 				</div>
 
+				<hr class="gfl-separator-elements" />
+
 				<!-- iframe -->
-				<div id="iframe" class="element-container">
-					<h3 class="custom-heading element-name">
+				<div id="iframe" class="gfl-element-container">
+					<h3 class="gfl-heading element-name">
 						<span><code>&lt;iframe&gt;</code>: Inline Frame</span>
 						<small>(<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">MDN</a>)</small>
 					</h3>
 					<div class="element">
-						<iframe src="index.html">If you see this, your browser does not support the iframe element.</iframe>
+						<iframe title="Inline Frame Example" width="300" height="200" src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik"></iframe>
 					</div>
 				</div>
 
+				<hr class="gfl-separator-elements" />
+
+				<!-- embed -->
+				<div id="embed" class="gfl-element-container">
+					<h3 class="gfl-heading element-name">
+						<span><code>&lt;embed&gt;</code>: Embed External Content</span>
+						<small>(<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/embed">MDN</a>)</small>
+					</h3>
+					<div class="element">
+						<embed title="Embed External Content Example" width="300" height="200" src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik" />
+					</div>
+				</div>
+
+				<hr class="gfl-separator-elements" />
+
 				<!-- object -->
-				<div id="object" class="element-container">
-					<h3 class="custom-heading element-name">
+				<div id="object" class="gfl-element-container">
+					<h3 class="gfl-heading element-name">
 						<span><code>&lt;object&gt;</code>: External Object</span>
 						<small>(<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/object">MDN</a>)</small>
 					</h3>
@@ -1058,9 +1191,11 @@
 					</div>
 				</div>
 
+				<hr class="gfl-separator-elements" />
+
 				<!-- video -->
-				<div id="video" class="element-container">
-					<h3 class="custom-heading element-name">
+				<div id="video" class="gfl-element-container">
+					<h3 class="gfl-heading element-name">
 						<span><code>&lt;video&gt;</code>: Video Embed</span>
 						<small>(<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video">MDN</a>)</small>
 					</h3>
@@ -1069,9 +1204,11 @@
 					</div>
 				</div>
 
+				<hr class="gfl-separator-elements" />
+
 				<!-- audio -->
-				<div id="audio" class="element-container">
-					<h3 class="custom-heading element-name">
+				<div id="audio" class="gfl-element-container">
+					<h3 class="gfl-heading element-name">
 						<span><code>&lt;audio&gt;</code>: Embed Audio</span>
 						<small>(<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio">MDN</a>)</small>
 					</h3>
@@ -1080,9 +1217,11 @@
 					</div>
 				</div>
 
+				<hr class="gfl-separator-elements" />
+
 				<!-- map-area -->
-				<div id="map-area" class="element-container">
-					<h3 class="custom-heading element-name">
+				<div id="map-area" class="gfl-element-container">
+					<h3 class="gfl-heading element-name">
 						<span><code>&lt;map&gt;</code>, <code>&lt;area&gt;</code>: Image Map Area</span>
 						<small>(<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/" map>MDN</a>)</small>
 					</h3>
@@ -1099,9 +1238,11 @@
 					</div>
 				</div>
 
+				<hr class="gfl-separator-elements" />
+
 				<!-- math -->
-				<div id="math" class="element-container">
-					<h3 class="custom-heading element-name">
+				<div id="math" class="gfl-element-container">
+					<h3 class="gfl-heading element-name">
 						<span><code>&lt;math&gt;</code>: MathML</span>
 						<small>(<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/math">MDN</a>)</small>
 					</h3>
@@ -1129,9 +1270,11 @@
 					</div>
 				</div>
 
+				<hr class="gfl-separator-elements" />
+
 				<!-- svg -->
-				<div id="svg" class="element-container">
-					<h3 class="custom-heading element-name">
+				<div id="svg" class="gfl-element-container">
+					<h3 class="gfl-heading element-name">
 						<span><code>&lt;svg&gt;</code>: Scalable Vector Graphics</span>
 						<small>(<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/svg">MDN</a>)</small>
 					</h3>
@@ -1144,63 +1287,67 @@
 			</div>
 
 			<!-- Tabular data -->
-			<div id="tabular-data" class="category-container">
-				<h2 class="custom-heading category-name">Tabular data</h2>
+			<div id="tabular-data" class="gfl-category-container">
+				<h2 class="gfl-heading gfl-category-name">Tabular data</h2>
 
 				<!-- table -->
-				<div id="table" class="element-container">
-					<h3 class="custom-heading element-name">
-						<span><code>&lt;table&gt;</code>: Table (+ <code>caption</code>, <code>colgroup</code>, <code>col</code>, <code>tbody</code>, <code>thead</code>, <code>tfoot</code>, <code>tr</code>, <code>td</code>, <code>th</code>)</span>
+				<div id="table" class="gfl-element-container">
+					<h3 class="gfl-heading element-name">
+						<span><code>&lt;table&gt;</code>: Table</span>
 						<small>(<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table">MDN</a>)</small>
 					</h3>
+					<p>(+ <code>caption</code>, <code>colgroup</code>, <code>col</code>, <code>tbody</code>, <code>thead</code>, <code>tfoot</code>, <code>tr</code>, <code>td</code>, <code>th</code>)</p>
 					<div class="element">
 						<table>
 							<caption>
-								How I chose to spend my money
+								Table Caption
 							</caption>
 							<thead>
 								<tr>
-									<th scope="col">Purchase</th>
-									<th scope="col">Location</th>
-									<th scope="col">Date</th>
-									<th scope="col">Evaluation</th>
-									<th scope="col">Cost (€)</th>
+									<th scope="col">Table Header 1</th>
+									<th scope="col">Table Header 2</th>
+									<th scope="col">Table Header 3</th>
+									<th scope="col">Table Header 4</th>
+									<th scope="col">Table Header 5</th>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<th scope="row">Haircut</th>
-									<td>Hairdresser</td>
-									<td>12/09</td>
-									<td>Great idea</td>
-									<td>30</td>
+									<th scope="row">Table Header Cell 1</th>
+									<td>Table Data Cell 1</td>
+									<td>Table Data Cell 1</td>
+									<td>Table Data Cell 1</td>
+									<td>Table Data Cell 1</td>
 								</tr>
 								<tr>
-									<th scope="row">Lasagna</th>
-									<td>Restaurant</td>
-									<td>12/09</td>
-									<td>Regrets</td>
-									<td>18</td>
+									<th scope="row">Table Header Cell 1</th>
+									<td>Table Data Cell 1</td>
+									<td>Table Data Cell 1</td>
+									<td>Table Data Cell 1</td>
+									<td>Table Data Cell 1</td>
 								</tr>
 								<tr>
-									<th scope="row">Shoes</th>
-									<td>Shoeshop</td>
-									<td>13/09</td>
-									<td>Big regrets</td>
-									<td>65</td>
+									<th scope="row">Table Header Cell 1</th>
+									<td>Table Data Cell 1</td>
+									<td>Table Data Cell 1</td>
+									<td>Table Data Cell 1</td>
+									<td>Table Data Cell 1</td>
 								</tr>
 								<tr>
-									<th scope="row">Toothpaste</th>
-									<td>Supermarket</td>
-									<td>13/09</td>
-									<td>Good</td>
-									<td>5</td>
+									<th scope="row">Table Header Cell 1</th>
+									<td>Table Data Cell 1</td>
+									<td>Table Data Cell 1</td>
+									<td>Table Data Cell 1</td>
+									<td>Table Data Cell 1</td>
 								</tr>
 							</tbody>
 							<tfoot>
 								<tr>
-									<th scope="row" colspan="4">SUM</th>
-									<td>118</td>
+									<th scope="row">Table Footer</th>
+									<td>Table Footer</td>
+									<td>Table Footer</td>
+									<td>Table Footer</td>
+									<td>Table Footer</td>
 								</tr>
 							</tfoot>
 						</table>
@@ -1209,12 +1356,12 @@
 			</div>
 
 			<!-- Forms -->
-			<div id="forms" class="category-container">
-				<h2 class="custom-heading category-name">Forms</h2>
+			<div id="forms" class="gfl-category-container">
+				<h2 class="gfl-heading gfl-category-name">Forms</h2>
 
 				<!-- fieldset, legend -->
-				<div id="fieldset-legend" class="element-container">
-					<h3 class="custom-heading element-name">
+				<div id="fieldset-legend" class="gfl-element-container">
+					<h3 class="gfl-heading element-name">
 						<span><code>&lt;fieldset&gt;</code> & <code>&lt;legend&gt;</code>: Field Set & Field Set Legend</span>
 						<small>(<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset">MDN</a>, <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/legend">MDN</a>)</small>
 					</h3>
@@ -1225,9 +1372,11 @@
 					</div>
 				</div>
 
+				<hr class="gfl-separator-elements" />
+
 				<!-- label -->
-				<div id="label" class="element-container">
-					<h3 class="custom-heading element-name">
+				<div id="label" class="gfl-element-container">
+					<h3 class="gfl-heading element-name">
 						<span><code>&lt;label&gt;</code>: Label</span>
 						<small>(<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label">MDN</a>)</small>
 					</h3>
@@ -1237,90 +1386,92 @@
 					</div>
 				</div>
 
+				<hr class="gfl-separator-elements" />
+
 				<!-- input -->
-				<div id="input" class="element-container">
-					<h3 class="custom-heading element-name">
+				<div id="input" class="gfl-element-container">
+					<h3 class="gfl-heading element-name">
 						<span><code>&lt;input&gt;</code>: Input</span>
 						<small>(<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">MDN</a>)</small>
 					</h3>
 					<div class="element">
 						<!-- type="hidden" -->
-						<div class="element-type">
+						<div class="gfl-element-type">
 							<label for="form-input-hidden">hidden</label>
 							<input type="hidden" id="form-input-hidden" name="hidden-name" value="hidden-value" />
 						</div>
 						<!-- type="text" -->
-						<div class="element-type">
+						<div class="gfl-element-type">
 							<label for="form-input-text">text</label>
 							<input type="text" id="form-input-text" placeholder="Placeholder" />
 						</div>
 						<!-- type="search" -->
-						<div class="element-type">
+						<div class="gfl-element-type">
 							<label for="form-input-search">search</label>
 							<input type="search" id="form-input-search" placeholder="Placeholder" />
 						</div>
 						<!-- type="tel" -->
-						<div class="element-type">
+						<div class="gfl-element-type">
 							<label for="form-input-tel">tel</label>
 							<input type="tel" id="form-input-tel" placeholder="Placeholder" />
 						</div>
 						<!-- type="url" -->
-						<div class="element-type">
+						<div class="gfl-element-type">
 							<label for="form-input-url">url</label>
 							<input type="url" id="form-input-url" placeholder="Placeholder" />
 						</div>
 						<!-- type="email" -->
-						<div class="element-type">
+						<div class="gfl-element-type">
 							<label for="form-input-email">email</label>
 							<input type="email" id="form-input-email" placeholder="Placeholder" />
 						</div>
 						<!-- type="password" -->
-						<div class="element-type">
+						<div class="gfl-element-type">
 							<label for="form-input-password">password</label>
 							<input type="password" id="form-input-password" placeholder="Placeholder" />
 						</div>
 						<!-- type="date" -->
-						<div class="element-type">
+						<div class="gfl-element-type">
 							<label for="form-input-date">date</label>
 							<input type="date" id="form-input-date" value="1970-01-01" />
 						</div>
 						<!-- type="month" -->
-						<div class="element-type">
+						<div class="gfl-element-type">
 							<label for="form-input-month">month</label>
 							<input type="month" id="form-input-month" value="1970-01" />
 						</div>
 						<!-- type="week" -->
-						<div class="element-type">
+						<div class="gfl-element-type">
 							<label for="form-input-week">week</label>
 							<input type="week" id="form-input-week" value="1970-W01" />
 						</div>
 						<!-- type="time" -->
-						<div class="element-type">
+						<div class="gfl-element-type">
 							<label for="form-input-time">time</label>
 							<input type="time" id="form-input-time" min="09:00" max="18:00" />
 						</div>
 						<!-- type="datetime-local" -->
-						<div class="element-type">
+						<div class="gfl-element-type">
 							<label for="form-input-datetime-local">datetime-local</label>
 							<input type="datetime-local" id="form-input-datetime-local" value="1970-01-01T00:00" />
 						</div>
 						<!-- type="number" -->
-						<div class="element-type">
+						<div class="gfl-element-type">
 							<label for="form-input-number">number</label>
 							<input type="number" id="form-input-number" placeholder="Placeholder" />
 						</div>
 						<!-- type="range" -->
-						<div class="element-type">
+						<div class="gfl-element-type">
 							<label for="form-input-range">range</label>
 							<input type="range" id="form-input-range" />
 						</div>
 						<!-- type="color" -->
-						<div class="element-type">
+						<div class="gfl-element-type">
 							<label for="form-input-color">color</label>
 							<input type="color" id="form-input-color" />
 						</div>
 						<!-- type="checkbox" -->
-						<div class="element-type">
+						<div class="gfl-element-type">
 							<b>checkbox</b>
 							<div>
 								<label for="form-input-checkbox-1">
@@ -1338,7 +1489,7 @@
 							</div>
 						</div>
 						<!-- type="radio" -->
-						<div class="element-type">
+						<div class="gfl-element-type">
 							<b>radio</b>
 							<div>
 								<label for="form-input-radio-1">
@@ -1356,102 +1507,106 @@
 							</div>
 						</div>
 						<!-- type="file" -->
-						<div class="element-type">
+						<div class="gfl-element-type">
 							<label for="form-input-file-single">file</label>
 							<input type="file" id="form-input-file-single" accept="" />
 						</div>
 						<!-- type="file" (multiple) -->
-						<div class="element-type">
+						<div class="gfl-element-type">
 							<label for="form-input-file-multiple">file (multiple)</label>
 							<input type="file" id="form-input-file-multiple" multiple accept="" />
 						</div>
 						<!-- type="submit" -->
-						<div class="element-type">
+						<div class="gfl-element-type">
 							<label for="form-input-submit">submit</label>
 							<input type="submit" id="form-input-submit" />
 						</div>
 						<!-- type="image" -->
-						<div class="element-type">
+						<div class="gfl-element-type">
 							<label for="form-input-image">image</label>
 							<input type="image" alt="Random image for input type image" id="form-input-image" src="https://picsum.photos/80/40" />
 						</div>
 						<!-- type="reset" -->
-						<div class="element-type">
+						<div class="gfl-element-type">
 							<label for="form-input-reset">reset</label>
 							<input type="reset" id="form-input-reset" />
 						</div>
 						<!-- type="button" -->
-						<div class="element-type">
+						<div class="gfl-element-type">
 							<label for="form-input-button">button</label>
 							<input type="button" id="form-input-button" value="input type='button'" />
 						</div>
 					</div>
 				</div>
 
+				<hr class="gfl-separator-elements" />
+
 				<!-- button -->
-				<div id="button" class="element-container">
-					<h3 class="custom-heading element-name">
+				<div id="button" class="gfl-element-container">
+					<h3 class="gfl-heading element-name">
 						<span><code>&lt;button&gt;</code>: Button</span>
 						<small>(<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button">MDN</a>)</small>
 					</h3>
 					<div class="element">
 						<!-- type="button" -->
-						<div class="element-type">
+						<div class="gfl-element-type">
 							<label>&lt;button type=button&gt;</label>
 							<button type="button">&lt;button type=button&gt;</button>
 						</div>
 						<!-- type="submit" -->
-						<div class="element-type">
+						<div class="gfl-element-type">
 							<label>&lt;button type=submit&gt;</label>
 							<button type="submit">&lt;button type=submit&gt;</button>
 						</div>
 						<!-- type="reset" -->
-						<div class="element-type">
+						<div class="gfl-element-type">
 							<label>&lt;button type=reset&gt;</label>
 							<button type="reset">&lt;button type=reset&gt;</button>
 						</div>
 						<!-- disabled -->
-						<div class="element-type">
+						<div class="gfl-element-type">
 							<label>&lt;button disabled&gt;</label>
 							<button disabled>&lt;button disabled&gt;</button>
 						</div>
 						<!-- aria-busy -->
-						<div class="element-type">
+						<div class="gfl-element-type">
 							<label>&lt;button aria-busy&gt;</label>
 							<button aria-busy="true">&lt;button aria-busy&gt;</button>
 						</div>
 						<!-- aria-disabled -->
-						<div class="element-type">
+						<div class="gfl-element-type">
 							<label>&lt;button aria-disabled&gt;</label>
 							<button aria-disabled="true">&lt;button aria-disabled&gt;</button>
 						</div>
 						<!-- aria-hidden -->
-						<div class="element-type">
+						<div class="gfl-element-type">
 							<label>&lt;button aria-hidden&gt;</label>
 							<button aria-hidden="true">&lt;button aria-hidden&gt;</button>
 						</div>
 						<!-- hidden -->
-						<div class="element-type">
+						<div class="gfl-element-type">
 							<label>&lt;button hidden&gt;</label>
 							<button hidden>&lt;button hidden&gt;</button>
 						</div>
 						<!-- aria-hidden=false hidden -->
-						<div class="element-type">
+						<div class="gfl-element-type">
 							<label>&lt;button aria-hidden=false hidden&gt;</label>
 							<button aria-hidden="false" hidden>&lt;button aria-hidden=false hidden&gt;</button>
 						</div>
 					</div>
 				</div>
 
+				<hr class="gfl-separator-elements" />
+
 				<!-- select -->
-				<div id="select" class="element-container">
-					<h3 class="custom-heading element-name">
+				<div id="select" class="gfl-element-container">
+					<h3 class="gfl-heading element-name">
 						<span><code>&lt;select&gt;</code>: Select</span>
 						<small>(<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">MDN</a>)</small>
 					</h3>
 					<div class="element">
 						<!-- simple -->
-						<div class="element-type">
+						<div class="gfl-element-type">
 							<label for="form-select-simple">Select</label>
 							<select id="form-select-simple" name="select-simple">
 								<option value="select-option-1">Option 1</option>
@@ -1460,7 +1615,7 @@
 							</select>
 						</div>
 						<!-- optgroup -->
-						<div class="element-type">
+						<div class="gfl-element-type">
 							<label for="form-select-optgroup">Select with <code>optgroup</code></label>
 							<select id="form-select-optgroup" name="select-optgroup">
 								<optgroup label="Group 1">
@@ -1476,7 +1631,7 @@
 							</select>
 						</div>
 						<!-- multiple -->
-						<div class="element-type">
+						<div class="gfl-element-type">
 							<label for="form-select-multiple">Select with <code>multiple</code></label>
 							<select id="form-select-multiple" multiple name="select-multiple">
 								<option value="select-multiple-option-1">Option 1</option>
@@ -1487,14 +1642,16 @@
 					</div>
 				</div>
 
+				<hr class="gfl-separator-elements" />
+
 				<!-- datalist -->
-				<div id="datalist" class="element-container">
-					<h3 class="custom-heading element-name">
+				<div id="datalist" class="gfl-element-container">
+					<h3 class="gfl-heading element-name">
 						<span><code>&lt;datalist&gt;</code>: Data List</span>
 						<small>(<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist">MDN</a>)</small>
 					</h3>
 					<div class="element">
-						<div class="element-type">
+						<div class="gfl-element-type">
 							<label for="form-datalist">Data List</label>
 							<input list="datalist-options" id="form-datalist" name="datalist" placeholder="Placeholder" />
 							<datalist id="datalist-options">
@@ -1508,23 +1665,27 @@
 					</div>
 				</div>
 
+				<hr class="gfl-separator-elements" />
+
 				<!-- textarea -->
-				<div id="textarea" class="element-container">
-					<h3 class="custom-heading element-name">
+				<div id="textarea" class="gfl-element-container">
+					<h3 class="gfl-heading element-name">
 						<span><code>&lt;textarea&gt;</code>: Textarea</span>
 						<small>(<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">MDN</a>)</small>
 					</h3>
 					<div class="element">
-						<div class="element-type">
+						<div class="gfl-element-type">
 							<label for="form-textarea">Textarea</label>
 							<textarea id="form-textarea" placeholder="Placeholder"></textarea>
 						</div>
 					</div>
 				</div>
 
+				<hr class="gfl-separator-elements" />
+
 				<!-- output -->
-				<div id="output" class="element-container">
-					<h3 class="custom-heading element-name">
+				<div id="output" class="gfl-element-container">
+					<h3 class="gfl-heading element-name">
 						<span><code>&lt;output&gt;</code>: Output</span>
 						<small>(<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/output">MDN</a>)</small>
 					</h3>
@@ -1539,97 +1700,103 @@
 					</div>
 				</div>
 
+				<hr class="gfl-separator-elements" />
+
 				<!-- progress -->
-				<div id="progress" class="element-container">
-					<h3 class="custom-heading element-name">
+				<div id="progress" class="gfl-element-container">
+					<h3 class="gfl-heading element-name">
 						<span><code>&lt;progress&gt;</code>: Progress Indicator</span>
 						<small>(<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress">MDN</a>)</small>
 					</h3>
 					<div class="element">
-						<div class="element-type">
+						<div class="gfl-element-type">
 							<label for="progress-1">No value:</label>
 							<progress id="progress-1">No value</progress>
 						</div>
-						<div class="element-type">
+						<div class="gfl-element-type">
 							<label for="progress-2">Value 0:</label>
 							<progress id="progress-2" value="0">0</progress>
 						</div>
-						<div class="element-type">
+						<div class="gfl-element-type">
 							<label for="progress-3">Value 0.5:</label>
 							<progress id="progress-3" value="0.5">0.5</progress>
 						</div>
-						<div class="element-type">
+						<div class="gfl-element-type">
 							<label for="progress-4">Value 1:</label>
 							<progress id="progress-4" value="1">1</progress>
 						</div>
-						<div class="element-type">
+						<div class="gfl-element-type">
 							<label for="progress-5">Value 75, max 100:</label>
 							<progress id="progress-5" max="100" value="75">75%</progress>
 						</div>
 					</div>
 				</div>
 
+				<hr class="gfl-separator-elements" />
+
 				<!-- meter -->
-				<div id="meter" class="element-container">
-					<h3 class="custom-heading element-name">
+				<div id="meter" class="gfl-element-container">
+					<h3 class="gfl-heading element-name">
 						<span><code>&lt;meter&gt;</code>: Meter</span>
 						<small>(<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meter">MDN</a>)</small>
 					</h3>
 					<div class="element">
-						<div class="element-type">
-							<label for="fuel-1">Low level:</label>
-							<meter id="fuel-1" min="0" max="100" low="33" high="66" optimum="80" value="32">at 32/100</meter>
+						<div class="gfl-element-type">
+							<label for="level-1">Low level:</label>
+							<meter id="level-1" min="0" max="100" low="33" high="66" optimum="80" value="32">at 32/100</meter>
 						</div>
-						<div class="element-type">
-							<label for="fuel-2">Medium level:</label>
-							<meter id="fuel-2" min="0" max="100" low="33" high="66" optimum="80" value="50">at 50/100</meter>
+						<div class="gfl-element-type">
+							<label for="level-2">Medium level:</label>
+							<meter id="level-2" min="0" max="100" low="33" high="66" optimum="80" value="50">at 50/100</meter>
 						</div>
-						<div class="element-type">
-							<label for="fuel-3">High level:</label>
-							<meter id="fuel-3" min="0" max="100" low="33" high="66" optimum="80" value="66">at 66/100</meter>
+						<div class="gfl-element-type">
+							<label for="level-3">High level:</label>
+							<meter id="level-3" min="0" max="100" low="33" high="66" optimum="80" value="66">at 66/100</meter>
 						</div>
-						<div class="element-type">
-							<label for="fuel-4">Optimum level:</label>
-							<meter id="fuel-4" min="0" max="100" low="33" high="66" optimum="80" value="90">at 90/100</meter>
+						<div class="gfl-element-type">
+							<label for="level-4">Optimum level:</label>
+							<meter id="level-4" min="0" max="100" low="33" high="66" optimum="80" value="90">at 90/100</meter>
 						</div>
 					</div>
 				</div>
 			</div>
 
 			<!-- Interactive elements -->
-			<div id="interactive-elements" class="category-container">
-				<h2 class="custom-heading category-name">Interactive elements</h2>
+			<div id="interactive-elements" class="gfl-category-container">
+				<h2 class="gfl-heading gfl-category-name">Interactive elements</h2>
 
 				<!-- details -->
-				<div id="details" class="element-container">
-					<h3 class="custom-heading element-name">
-						<span><code>&lt;details&gt;</code> (& <code>&lt;summary&gt;</code>): Details Disclosure (& Disclosure Summary)</span>
+				<div id="details" class="gfl-element-container">
+					<h3 class="gfl-heading element-name">
+						<span><code>&lt;details&gt;</code>/<code>&lt;summary&gt;</code>: Details Disclosure</span>
 						<small>(<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details" details>MDN</a>)</small>
 					</h3>
 					<div class="element">
-						<div class="element-type">
-							<h4>No <code>summary</code>:</h4>
+						<div class="gfl-element-type">
+							<h4>Without <code>summary</code> element:</h4>
 							<details>
-								<p>Something small enough to escape casual notice.</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 							</details>
 						</div>
-						<div class="element-type">
-							<h4>With <code>summary</code>:</h4>
+						<div class="gfl-element-type">
+							<h4>With <code>summary</code> element:</h4>
 							<details>
-								<summary>System Requirements</summary>
-								<p>Requires a computer running an operating system. The computer must have some memory and ideally some kind of long-term storage. An input device as well as some form of output device is recommended.</p>
+								<summary>Custom summary</summary>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 								<details>
-									<summary>System Requirements</summary>
-									<p>Requires a computer running an operating system. The computer must have some memory and ideally some kind of long-term storage. An input device as well as some form of output device is recommended.</p>
+									<summary>Nested details</summary>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 								</details>
 							</details>
 						</div>
 					</div>
 				</div>
 
+				<hr class="gfl-separator-elements" />
+
 				<!-- dialog -->
-				<div id="dialog" class="element-container">
-					<h3 class="custom-heading element-name">
+				<div id="dialog" class="gfl-element-container">
+					<h3 class="gfl-heading element-name">
 						<span><code>&lt;dialog&gt;</code>: Dialog</span>
 						<small>(<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog">MDN</a>)</small>
 					</h3>
@@ -1644,17 +1811,26 @@
 			</div>
 
 			<!-- Scripting -->
-			<div id="scripting" class="category-container">
-				<h2 class="custom-heading category-name">Scripting</h2>
+			<div id="scripting" class="gfl-category-container">
+				<h2 class="gfl-heading gfl-category-name">Scripting</h2>
 
 				<!-- canvas -->
-				<div id="canvas" class="element-container">
-					<h3 class="custom-heading element-name">
+				<div id="canvas" class="gfl-element-container">
+					<h3 class="gfl-heading element-name">
 						<span><code>&lt;canvas&gt;</code>: Graphics Canvas</span>
 						<small>(<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas">MDN</a>)</small>
 					</h3>
 					<div class="element">
-						<canvas>Canvas</canvas>
+						<canvas id="gflCanvas" width="100" height="100"> An alternative text describing what your canvas displays. </canvas>
+						<script>
+							const canvas = document.querySelector("canvas#gflCanvas");
+							const ctx = canvas.getContext("2d");
+							ctx.fillStyle = "rebeccapurple";
+							ctx.fillRect(0, 0, 100, 100);
+							ctx.font = "bold 32px sans-serif";
+							ctx.fillStyle = "white";
+							ctx.fillText("Hi!", 0, 32);
+						</script>
 					</div>
 				</div>
 			</div>

@@ -1,5 +1,9 @@
 # https://editorconfig.org
 
+# NOTE:
+# EditorConfig and Prettier share some options. To avoid conflicts between them, only configure these options in the .editorconfig file. Prettier will use them instead of its own defaults.
+# Refs. https://prettier.io/docs/en/configuration#editorconfig and https://joepkockelkorn.com/blog/combining-gitattributes-editorconfig-and-prettier
+
 # Top-most EditorConfig file
 root = true
 

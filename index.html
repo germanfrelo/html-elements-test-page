@@ -7,7 +7,7 @@
 		<meta name="description" content="An up-to-date test page filled with common HTML elements to be used to provide visual feedback whilst building CSS systems and frameworks." />
 		<meta name="color-scheme" content="light dark" />
 		<link rel="stylesheet" href="assets/css/index.css" />
-		<link id="stylesheet" rel="stylesheet" href="" />
+		<link rel="stylesheet" href="" id="customStyleSheet" />
 		<script src="assets/js/index.js"></script>
 	</head>
 
@@ -37,37 +37,6 @@
 						<li>You can compare different style sheets.</li>
 					</ul>
 				</div>
-
-				<!-- Compare Style Sheets -->
-				<fieldset id="compare-styles">
-					<legend>Compare Style Sheets</legend>
-					<ul class="buttons">
-						<li>
-							<button onclick="loadStyleSheet('')">Browser's Default Styles</button>
-							<span>(<a target="_blank" href="https://meiert.com/en/blog/user-agent-style-sheets/">source</a>)</span>
-						</li>
-
-						<li>
-							<button onclick="loadStyleSheet('https://unpkg.com/@csstools/normalize.css')">@csstools/normalize.css</button>
-							<span>(<a target="_blank" href="https://github.com/csstools/normalize.css">source</a>)</span>
-						</li>
-
-						<li>
-							<button onclick="loadStyleSheet('https://cdn.skypack.dev/sanitize.css')">@csstools/sanitize.css</button>
-							<span>(<a target="_blank" href="https://github.com/csstools/sanitize.css/">source</a>)</span>
-						</li>
-
-						<li>
-							<button onclick="loadStyleSheet('https://unpkg.com/modern-normalize@3.0.1/modern-normalize.css')">@sindresorhus/modern-normalize</button>
-							<span>(<a target="_blank" href="https://github.com/sindresorhus/modern-normalize">source</a>)</span>
-						</li>
-
-						<li>
-							<button onclick="loadStyleSheet('https://germanfrelo.github.io/base-css-stylesheet/base.css')">@germanfrelo/base.css</button>
-							<span>(<a target="_blank" href="https://github.com/germanfrelo/base-css-stylesheet">source</a>)</span>
-						</li>
-					</ul>
-				</fieldset>
 
 				<!-- Navigation: Table of Contents -->
 				<details>
@@ -322,6 +291,78 @@
 							</li>
 						</ol>
 					</nav>
+				</details>
+
+				<!-- Compare Style Sheets -->
+
+				<details>
+					<summary>Compare Style Sheets</summary>
+					<form id="formChangeStyleSheet">
+						<fieldset>
+							<legend>More conservative</legend>
+							<div class="gfl-buttons">
+								<label>
+									<input type="radio" name="stylesheet" value="" checked /> Browser's Default Styles
+									<span>(<a rel="external" href="https://meiert.com/en/blog/user-agent-style-sheets/">source</a>)</span>
+								</label>
+
+								<label>
+									<input type="radio" name="stylesheet" value="https://germanfrelo.github.io/base-css-stylesheet/base.css" /> @germanfrelo/base.css
+									<span>(<a rel="external" href="https://github.com/germanfrelo/base-css-stylesheet">source</a>)</span>
+								</label>
+
+								<label>
+									<input type="radio" name="stylesheet" value="https://unpkg.com/@csstools/normalize.css" /> @csstools/normalize.css
+									<span>(<a rel="external" href="https://github.com/csstools/normalize.css">source</a>)</span>
+								</label>
+
+								<label>
+									<input type="radio" name="stylesheet" value="https://cdn.skypack.dev/sanitize.css" /> @csstools/sanitize.css
+									<span>(<a rel="external" href="https://github.com/csstools/sanitize.css/">source</a>)</span>
+								</label>
+
+								<label>
+									<input type="radio" name="stylesheet" value="https://unpkg.com/modern-normalize@3.0.1/modern-normalize.css" /> @sindresorhus/modern-normalize
+									<span>(<a rel="external" href="https://github.com/sindresorhus/modern-normalize">source</a>)</span>
+								</label>
+
+								<label>
+									<input type="radio" name="stylesheet" value="assets/css/andy-bell-css-reset.css" /> Andy Bell's CSS Reset
+									<span>(<a rel="external" href="https://piccalil.li/blog/a-more-modern-css-reset/">source</a>)</span>
+								</label>
+
+								<label>
+									<input type="radio" name="stylesheet" value="assets/css/css-remedy.css" /> CSS Remedy
+									<span>(<a rel="external" href="https://github.com/jensimmons/cssremedy">source</a>)</span>
+								</label>
+
+								<label>
+									<input type="radio" name="stylesheet" value="assets/css/joshwcomeau-css-reset.css" /> Josh W. Comeau's CSS Reset
+									<span>(<a rel="external" href="https://www.joshwcomeau.com/css/custom-css-reset/">source</a>)</span>
+								</label>
+							</div>
+						</fieldset>
+
+						<fieldset>
+							<legend>More aggressive</legend>
+							<div class="gfl-buttons">
+								<label>
+									<input type="radio" name="stylesheet" value="https://unpkg.com/tailwindcss@3.4.15/src/css/preflight.css" /> @tailwindcss/preflight@3.4.15
+									<span>(<a rel="external" href="https://tailwindcss.com/docs/preflight">source</a>)</span>
+								</label>
+
+								<label>
+									<input type="radio" name="stylesheet" value="./assets/css/elad-shechter-css-reset.css" /> @elad2412/the-new-css-reset
+									<span>(<a rel="external" href="https://github.com/elad2412/the-new-css-reset">source</a>)</span>
+								</label>
+
+								<label>
+									<input type="radio" name="stylesheet" value="https://unpkg.com/open-props/normalize.min.css" /> @argyleink/open-props' Normalize
+									<span>(<a rel="external" href="https://github.com/argyleink/open-props">source</a>)</span>
+								</label>
+							</div>
+						</fieldset>
+					</form>
 				</details>
 			</div>
 		</header>

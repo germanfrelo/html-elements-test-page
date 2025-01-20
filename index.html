@@ -5,70 +5,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>HTML elements test page</title>
 		<meta name="color-scheme" content="light dark" />
+		<link rel="stylesheet" href="assets/css/index.css" />
 		<link id="stylesheet" rel="stylesheet" href="" />
 	</head>
-
-	<style>
-		.flow > * {
-			margin-block: 0;
-		}
-
-		.flow > * + * {
-			margin-block-start: 1.5em;
-		}
-
-		.stack {
-			display: flex;
-			flex-direction: column;
-			row-gap: var(--stack-gap, 0.5em);
-			align-items: flex-start;
-		}
-
-		.stack > * {
-			margin-block: 0;
-		}
-
-		.intro {
-			padding: 1em;
-			background-color: hsl(210deg 100% 50% / 10%);
-			border: 0.125rem solid;
-			border-radius: 0.125em;
-		}
-
-		.heading {
-			padding-block: 0.25em;
-			padding-inline: 0.75rem;
-			line-height: 1;
-		}
-
-		.category-name {
-			margin-block-start: 4rem;
-			font-size: 2rem;
-			color: white;
-			background-color: #222;
-		}
-
-		.element-container {
-			border: 0.0625rem solid #ccc;
-		}
-
-		.element-name {
-			margin-block: 0;
-			font-size: 1.25rem;
-			color: #222;
-			background-color: #eee;
-			border-block-end: 0.0625rem solid #ccc;
-		}
-
-		.element {
-			/* padding: 1rem; */
-		}
-
-		.element-type > label {
-			display: block;
-			max-inline-size: max-content;
-		}
-	</style>
 
 	<script>
 		function loadStyleSheet(href = "") {

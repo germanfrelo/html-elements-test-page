@@ -17,16 +17,16 @@
 }
 
 .gfl-buttons {
-	list-style-type: none;
-	padding: 0;
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(min(18rem, 100%), 1fr));
 	gap: 1rem;
+	padding: 0;
+	list-style-type: none;
 }
 
 .gfl-heading {
-	margin-block: 0;
 	padding: 0.25em;
+	margin-block: 0;
 	text-wrap: balance;
 }
 
@@ -62,8 +62,8 @@ h6.gfl-heading {
 }
 
 .gfl-heading code {
-	text-transform: lowercase;
 	font-size: 80%;
+	text-transform: lowercase;
 }
 
 .gfl-category-name {
@@ -74,9 +74,9 @@ h6.gfl-heading {
 .gfl-element-header {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
-	align-items: center;
 	gap: 1em;
+	align-items: center;
+	justify-content: space-between;
 	padding: 1rem;
 	color: light-dark(#222, #eee);
 	background-color: light-dark(#eee, #444);
@@ -87,12 +87,12 @@ h6.gfl-heading {
 }
 
 .gfl-element-header ul[role="list"] {
-	list-style-type: none;
-	padding-inline-start: 0;
-	margin-block: 0;
 	display: flex;
 	flex-wrap: wrap;
 	gap: 1.5em;
+	padding-inline-start: 0;
+	margin-block: 0;
+	list-style-type: none;
 }
 
 .gfl-element-type > label {
@@ -107,23 +107,26 @@ h6.gfl-heading {
 	padding: 0 !important;
 	margin: -1px !important;
 	overflow: hidden !important;
-	/* legacy browsers */
-	clip: rect(1px, 1px, 1px, 1px);
-	/* modern browsers */
-	clip-path: inset(50%);
+
 	/* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
 	white-space: nowrap;
 	border: 0 !important;
+
+	/* legacy browsers */
+	clip: rect(1px, 1px, 1px, 1px);
+
+	/* modern browsers */
+	clip-path: inset(50%);
 }
 
 .gfl-skip-link:focus-visible {
 	position: absolute;
-	background: black;
-	color: white;
-	text-decoration: none;
 	top: 1rem;
 	left: 1rem;
 	padding: 1em;
+	color: white;
+	text-decoration: none;
+	background: black;
 }
 
 :is(#gfl-intro, #gfl-toc) :is(li + li, li > :is(ol, ul)) {

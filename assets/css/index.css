@@ -1,20 +1,19 @@
-.flow > * {
+.gfl-root {
+	/* @link https://utopia.fyi/type/calculator?c=320,16,1.2,1440,16,1.25,5,0,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+	--step-0: clamp(1rem, 1rem + 0vw, 1rem);
+	--step-1: clamp(1.2rem, 1.1857rem + 0.0714vw, 1.25rem);
+	--step-2: clamp(1.44rem, 1.405rem + 0.175vw, 1.5625rem);
+	--step-3: clamp(1.728rem, 1.6637rem + 0.3216vw, 1.9531rem);
+	--step-4: clamp(2.0736rem, 1.9685rem + 0.5254vw, 2.4414rem);
+	--step-5: clamp(2.4883rem, 2.3273rem + 0.8049vw, 3.0518rem);
+}
+
+.gfl-flow > * {
 	margin: 0;
 }
 
-.flow > * + * {
+.gfl-flow > * + * {
 	margin-block-start: var(--flow-space, 1.5em);
-}
-
-.stack {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	row-gap: var(--stack-gap, 0.5em);
-}
-
-.stack > * {
-	margin-block: 0;
 }
 
 .gfl-buttons {
@@ -25,84 +24,83 @@
 	gap: 1rem;
 }
 
-* + .element-container {
-	margin-block-start: 1.5em;
-}
-
-.element-container {
-	/* border: 1px solid #ccc; */
-}
-
-.element-container > .element-name {
-	/* margin-block: 0; */
-	/* border-block-end: 1px solid #ccc; */
-}
-
-/* @link https://utopia.fyi/type/calculator?c=320,16,1.2,1440,16,1.25,5,0,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
-.custom-heading {
-	--step-0: clamp(1rem, 1rem + 0vw, 1rem);
-	--step-1: clamp(1.2rem, 1.1857rem + 0.0714vw, 1.25rem);
-	--step-2: clamp(1.44rem, 1.405rem + 0.175vw, 1.5625rem);
-	--step-3: clamp(1.728rem, 1.6637rem + 0.3216vw, 1.9531rem);
-	--step-4: clamp(2.0736rem, 1.9685rem + 0.5254vw, 2.4414rem);
-	--step-5: clamp(2.4883rem, 2.3273rem + 0.8049vw, 3.0518rem);
+.gfl-heading {
+	margin-block: 0;
 	padding: 0.25em;
 	text-wrap: balance;
 }
-h1.custom-heading {
+
+h1.gfl-heading {
 	--color-html5: hsl(13deg 77% 52%);
 	font-size: var(--step-5);
 	color: hsl(from var(--color-html5) h s 100%);
 	background-color: var(--color-html5);
 }
-h2.custom-heading {
+
+h2.gfl-heading {
 	font-size: var(--step-4);
-	margin-block-start: 3em;
 }
-h3.custom-heading {
+
+h3.gfl-heading {
 	font-size: var(--step-3);
-	margin-block-start: 2em;
 }
-h4.custom-heading {
+
+h4.gfl-heading {
 	font-size: var(--step-2);
-	margin-block-start: 1em;
 }
-h5.custom-heading {
+
+h5.gfl-heading {
 	font-size: var(--step-1);
 }
-h6.custom-heading {
+
+h6.gfl-heading {
 	font-size: var(--step-0);
 }
 
-.custom-heading a {
+.gfl-heading a {
 	font-weight: normal;
 }
 
-.custom-heading code {
+.gfl-heading code {
 	text-transform: lowercase;
 	font-size: 80%;
 }
 
-.custom-heading.category-name {
+.gfl-category-name {
 	color: light-dark(#fff, #111);
 	background-color: light-dark(#222, #eee);
 }
 
-.custom-heading.element-name {
+.gfl-element-header {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
+	align-items: center;
 	gap: 1em;
+	padding: 1rem;
 	color: light-dark(#222, #eee);
 	background-color: light-dark(#eee, #444);
 }
 
-.element-type > label {
+.gfl-element-header .gfl-heading {
+	padding: revert;
+}
+
+.gfl-element-header ul[role="list"] {
+	list-style-type: none;
+	padding-inline-start: 0;
+	margin-block: 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.5em;
+}
+
+.gfl-element-type > label {
 	display: block;
 	max-inline-size: max-content;
 }
 
-.visually-hidden,
-.skip-link:not(:focus) {
+.gfl-skip-link:not(:focus) {
 	position: absolute !important;
 	width: 1px !important;
 	height: 1px !important;
@@ -118,7 +116,7 @@ h6.custom-heading {
 	border: 0 !important;
 }
 
-.skip-link:focus-visible {
+.gfl-skip-link:focus-visible {
 	position: absolute;
 	background: black;
 	color: white;
@@ -128,6 +126,23 @@ h6.custom-heading {
 	padding: 1em;
 }
 
-#intro li + li {
+:is(#gfl-intro, #gfl-toc) :is(li + li, li > :is(ol, ul)) {
 	margin-block-start: 0.5em;
+}
+
+body > header + main {
+	margin-block-start: 3rem;
+}
+
+.gfl-category-container + .gfl-category-container {
+	margin-block-start: 6rem;
+}
+
+.gfl-category-name + .gfl-element-container {
+	margin-block-start: 2rem;
+}
+
+.gfl-separator-elements {
+	margin-block: 2rem;
+	border: 1px solid gray;
 }

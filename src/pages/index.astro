@@ -1,4 +1,8 @@
 ---
+import audio from "../assets/audio.mp3";
+import imageMap from "../assets/image-map.png";
+import image from "../assets/image.jpg";
+import video from "../assets/video.mp4";
 import "../styles/index.css";
 ---
 
@@ -470,7 +474,7 @@ A leaflet.
 				<h3 class="heading element-name"><code>&lt;figure&gt;</code>: Figure with Optional Caption</h3>
 				<div class="element">
 					<figure>
-						<img src="assets/media/image.jpg" alt="Mt. Fuji" />
+						<img src={image.src} alt="Mt. Fuji" />
 						<figcaption>Photo by <a rel="external" href="https://unsplash.com/@katzenbus">Daniel Hehn</a> on Unsplash</figcaption>
 					</figure>
 				</div>
@@ -773,8 +777,8 @@ A leaflet.
 				<h3 class="heading element-name"><code>&lt;picture&gt;</code>: Picture</h3>
 				<div class="element">
 					<picture>
-						<source srcset="https://placedog.net/500?random" media="(max-width: 500px)" />
-						<img src="assets/media/image.jpg" alt="Mt. Fuji, by Daniel Hehn" />
+						<source srcset={image.src} media="(max-width: 500px)" />
+						<img src={image.src} alt="Mt. Fuji, by Daniel Hehn" />
 					</picture>
 				</div>
 			</div>
@@ -783,7 +787,7 @@ A leaflet.
 			<div id="img" class="element-container">
 				<h3 class="heading element-name"><code>&lt;img&gt;</code>: Image Embed</h3>
 				<div class="element">
-					<img src="assets/media/image.jpg" alt="Mt. Fuji, by Daniel Hehn" />
+					<img src={image.src} alt="Mt. Fuji, by Daniel Hehn" />
 				</div>
 			</div>
 
@@ -799,7 +803,7 @@ A leaflet.
 			<div id="object" class="element-container">
 				<h3 class="heading element-name"><code>&lt;object&gt;</code>: External Object</h3>
 				<div class="element">
-					<object type="image/jpeg" data="assets/image.jpg"></object>
+					<object type="image/jpeg" data={image.src}></object>
 				</div>
 			</div>
 
@@ -807,7 +811,7 @@ A leaflet.
 			<div id="video" class="element-container">
 				<h3 class="heading element-name"><code>&lt;video&gt;</code>: Video Embed</h3>
 				<div class="element">
-					<video src="assets/media/video.mp4" controls></video>
+					<video src={video} controls></video>
 				</div>
 			</div>
 
@@ -815,7 +819,7 @@ A leaflet.
 			<div id="audio" class="element-container">
 				<h3 class="heading element-name"><code>&lt;audio&gt;</code>: Embed Audio</h3>
 				<div class="element">
-					<audio src="assets/media/audio.mp3" controls></audio>
+					<audio src={audio} controls></audio>
 				</div>
 			</div>
 
@@ -823,7 +827,7 @@ A leaflet.
 			<div id="map-area" class="element-container">
 				<h3 class="heading element-name"><code>&lt;map&gt;</code>, <code>&lt;area&gt;</code>: Image Map Area</h3>
 				<div class="element">
-					<img src="assets/media/image-map.png" alt="World continents" width="320" height="160" usemap="#image-map" />
+					<img src={imageMap.src} alt="World continents" width="320" height="160" usemap="#image-map" />
 					<map name="image-map">
 						<area title="North America" href="https://en.wikipedia.org/wiki/North_America" shape="poly" coords="48,89,67,69,77,49,140,0,68,0,6,10,4,31,16,69" />
 						<area title="South America" href="https://en.wikipedia.org/wiki/South_America" shape="poly" coords="48,88,61,74,119,99,95,160,66,159" />

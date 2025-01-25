@@ -1,3 +1,7 @@
+---
+
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -9,11 +13,25 @@
 		<meta name="color-scheme" content="light dark" />
 		<link rel="stylesheet" href="styles/index.css" />
 		<link id="stylesheet" rel="stylesheet" href="" />
+
 		<script>
-			function loadStyleSheet(href = "") {
-				const styleSheetLink = document.querySelector("#stylesheet");
-				styleSheetLink.setAttribute("href", href);
-			}
+			document.addEventListener("DOMContentLoaded", () => {
+				const stylesheet = document.querySelector("#stylesheet");
+
+				const changeStyleSheetButtons = document.querySelectorAll("[data-change-stylesheet]");
+
+				changeStyleSheetButtons.forEach((button) => {
+					button.addEventListener("click", () => {
+						const styleSheetHref = button.getAttribute("data-change-stylesheet");
+
+						if (!styleSheetHref) {
+							stylesheet!.setAttribute("href", "");
+						} else {
+							stylesheet!.setAttribute("href", styleSheetHref);
+						}
+					});
+				});
+			});
 		</script>
 	</head>
 
@@ -39,8 +57,8 @@
 			<fieldset>
 				<legend>Compare Style Sheets</legend>
 				<ul class="stack">
-					<li><button onclick="loadStyleSheet('')">Default Browser Styles</button> (<a href="https://meiert.com/en/blog/user-agent-style-sheets/">see source</a>)</li>
-					<li><button onclick="loadStyleSheet('https://germanfrelo.github.io/base-css-stylesheet/base.css')">My Base Styles</button> (<a href="https://github.com/germanfrelo/base-css-stylesheet/blob/main/base.css">see source</a>)</li>
+					<li><button data-change-stylesheet="">Default Browser Styles</button> (<a href="https://meiert.com/en/blog/user-agent-style-sheets/">see source</a>)</li>
+					<li><button data-change-stylesheet="https://germanfrelo.github.io/base-css-stylesheet/base.css">My Base Styles</button> (<a href="https://github.com/germanfrelo/base-css-stylesheet/blob/main/base.css">see source</a>)</li>
 				</ul>
 			</fieldset>
 

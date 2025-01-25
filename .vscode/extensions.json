@@ -3,6 +3,8 @@
 		// Formatting
 		"EditorConfig.EditorConfig",
 		"esbenp.prettier-vscode",
+		// Frameworks
+		"astro-build.astro-vscode",
 		// Linting
 		"dbaeumer.vscode-eslint",
 		"stylelint.vscode-stylelint",

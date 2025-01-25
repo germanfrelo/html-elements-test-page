@@ -9,6 +9,13 @@
 	// Lint CSS with Stylelint
 	// Disable VS Code's built-in linters to prevent them from reporting the same errors as Stylelint
 	"stylelint.enable": true, // default
+	"stylelint.validate": [
+		// Default
+		"css",
+		"postcss",
+		// Custom
+		"astro"
+	],
 	"css.validate": false,
 	"less.validate": false,
 	"scss.validate": false,

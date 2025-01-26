@@ -1,20 +1,42 @@
+---
+import audio from "../assets/audio.mp3";
+import imageMap from "../assets/image-map.png";
+import image from "../assets/image.jpg";
+import video from "../assets/video.mp4";
+import "../styles/index.css";
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content="{Astro.generator}" />
 		<title>HTML elements test page</title>
 		<meta name="color-scheme" content="light dark" />
-		<link rel="stylesheet" href="assets/css/index.css" />
 		<link id="stylesheet" rel="stylesheet" href="" />
-	</head>
 
-	<script>
-		function loadStyleSheet(href = "") {
-			const styleSheetLink = document.querySelector("#stylesheet");
-			styleSheetLink.setAttribute("href", href);
-		}
-	</script>
+		<script>
+			document.addEventListener("DOMContentLoaded", () => {
+				const stylesheet = document.querySelector("#stylesheet");
+
+				const changeStyleSheetButtons = document.querySelectorAll("[data-change-stylesheet]");
+
+				changeStyleSheetButtons.forEach((button) => {
+					button.addEventListener("click", () => {
+						const styleSheetHref = button.getAttribute("data-change-stylesheet");
+
+						if (!styleSheetHref) {
+							stylesheet!.setAttribute("href", "");
+						} else {
+							stylesheet!.setAttribute("href", styleSheetHref);
+						}
+					});
+				});
+			});
+		</script>
+	</head>
 
 	<body>
 		<h1>HTML elements test page</h1>
@@ -38,8 +60,8 @@
 			<fieldset>
 				<legend>Compare Style Sheets</legend>
 				<ul class="stack">
-					<li><button onclick="loadStyleSheet('')">Default Browser Styles</button> (<a href="https://meiert.com/en/blog/user-agent-style-sheets/">see source</a>)</li>
-					<li><button onclick="loadStyleSheet('https://germanfrelo.github.io/base-css-stylesheet/base.css')">My Base Styles</button> (<a href="https://github.com/germanfrelo/base-css-stylesheet/blob/main/base.css">see source</a>)</li>
+					<li><button data-change-stylesheet="">Default Browser Styles</button> (<a href="https://meiert.com/en/blog/user-agent-style-sheets/">see source</a>)</li>
+					<li><button data-change-stylesheet="https://germanfrelo.github.io/base-css-stylesheet/base.css">My Base Styles</button> (<a href="https://github.com/germanfrelo/base-css-stylesheet/blob/main/base.css">see source</a>)</li>
 				</ul>
 			</fieldset>
 
@@ -340,8 +362,7 @@ a friend lost to the
         unknown
                                 (night)
 
-~cdr 11dec07</pre
-					>
+~cdr 11dec07</pre>
 
 					<pre>
   L          TE
@@ -360,8 +381,7 @@ a friend lost to the
      LA    BIEN
     SI      RESPI
             RER       - Apollinaire
-</pre
-					>
+</pre>
 
 					<pre role="img" aria-label="ASCII COW">
       ___________________________
@@ -372,10 +392,9 @@ a friend lost to the
               (__)\       )\/\
                   ||----w |
                   ||     ||
-  </pre
-					>
+  </pre>
 
-					<pre><code>pre {
+					<pre><code is:raw>pre {
 	display: block;
 	font-family: monospace;
 	white-space-collapse: preserve;
@@ -455,7 +474,7 @@ A leaflet.
 				<h3 class="heading element-name"><code>&lt;figure&gt;</code>: Figure with Optional Caption</h3>
 				<div class="element">
 					<figure>
-						<img src="assets/media/fuji-daniel-hehn.jpg" alt="Mt. Fuji" />
+						<img src={image.src} alt="Mt. Fuji" />
 						<figcaption>Photo by <a rel="external" href="https://unsplash.com/@katzenbus">Daniel Hehn</a> on Unsplash</figcaption>
 					</figure>
 				</div>
@@ -658,8 +677,7 @@ A leaflet.
 				<div class="element">
 					<p>Footnotes: Lorem<sub>1</sub></p>
 					<p>
-						Math variables: <var>x<sub>1</sub></var
-						>,...,<var>x<sub>n</sub></var>
+						Math variables: <var>x<sub>1</sub></var>,...,<var>x<sub>n</sub></var>
 					</p>
 					<p>Chemical formulas: H<sub>2</sub>O</p>
 				</div>
@@ -759,8 +777,8 @@ A leaflet.
 				<h3 class="heading element-name"><code>&lt;picture&gt;</code>: Picture</h3>
 				<div class="element">
 					<picture>
-						<source srcset="https://placedog.net/500?random" media="(max-width: 500px)" />
-						<img src="assets/media/fuji-daniel-hehn.jpg" alt="Mt. Fuji, by Daniel Hehn" />
+						<source srcset={image.src} media="(max-width: 500px)" />
+						<img src={image.src} alt="Mt. Fuji, by Daniel Hehn" />
 					</picture>
 				</div>
 			</div>
@@ -769,7 +787,7 @@ A leaflet.
 			<div id="img" class="element-container">
 				<h3 class="heading element-name"><code>&lt;img&gt;</code>: Image Embed</h3>
 				<div class="element">
-					<img src="assets/media/fuji-daniel-hehn.jpg" alt="Mt. Fuji, by Daniel Hehn" />
+					<img src={image.src} alt="Mt. Fuji, by Daniel Hehn" />
 				</div>
 			</div>
 
@@ -785,7 +803,7 @@ A leaflet.
 			<div id="object" class="element-container">
 				<h3 class="heading element-name"><code>&lt;object&gt;</code>: External Object</h3>
 				<div class="element">
-					<object type="image/jpeg" data="assets/media/fuji-daniel-hehn.jpg"></object>
+					<object type="image/jpeg" data={image.src}></object>
 				</div>
 			</div>
 
@@ -793,7 +811,7 @@ A leaflet.
 			<div id="video" class="element-container">
 				<h3 class="heading element-name"><code>&lt;video&gt;</code>: Video Embed</h3>
 				<div class="element">
-					<video src="assets/media/video.mp4" controls></video>
+					<video src={video} controls></video>
 				</div>
 			</div>
 
@@ -801,7 +819,7 @@ A leaflet.
 			<div id="audio" class="element-container">
 				<h3 class="heading element-name"><code>&lt;audio&gt;</code>: Embed Audio</h3>
 				<div class="element">
-					<audio src="assets/media/audio.mp3" controls></audio>
+					<audio src={audio} controls></audio>
 				</div>
 			</div>
 
@@ -809,8 +827,8 @@ A leaflet.
 			<div id="map-area" class="element-container">
 				<h3 class="heading element-name"><code>&lt;map&gt;</code>, <code>&lt;area&gt;</code>: Image Map Area</h3>
 				<div class="element">
-					<img src="assets/media/world-continents.png" alt="World continents" width="320" height="160" orgwidth="320" orgheight="160" usemap="#world-continents" />
-					<map name="world-continents">
+					<img src={imageMap.src} alt="World continents" width="320" height="160" usemap="#image-map" />
+					<map name="image-map">
 						<area title="North America" href="https://en.wikipedia.org/wiki/North_America" shape="poly" coords="48,89,67,69,77,49,140,0,68,0,6,10,4,31,16,69" />
 						<area title="South America" href="https://en.wikipedia.org/wiki/South_America" shape="poly" coords="48,88,61,74,119,99,95,160,66,159" />
 						<area title="Europe" href="https://en.wikipedia.org/wiki/Europe" shape="poly" coords="124,49,145,46,158,50,187,43,198,6,146,1,115,21" />
@@ -869,9 +887,7 @@ A leaflet.
 				<h3 class="heading element-name"><code>&lt;table&gt;</code>: Table</h3>
 				<div class="element">
 					<table>
-						<caption>
-							How I chose to spend my money
-						</caption>
+						<caption> How I chose to spend my money </caption>
 						<thead>
 							<tr>
 								<th scope="col">Purchase</th>

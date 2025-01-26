@@ -1,6 +1,6 @@
 {
 	"name": "html-elements-test-page",
-	"version": "1.0.0",
+	"version": "0.0.1",
 	"private": true,
 	"description": "A page filled with common HTML elements to be used for testing purposes.",
 	"keywords": [
@@ -24,6 +24,9 @@
 	"type": "module",
 	"main": "",
 	"scripts": {
+		"astro": "astro",
+		"build": "astro build",
+		"dev": "astro dev",
 		"format": "prettier --write .",
 		"format:check": "prettier --check .",
 		"lint": "npm run lint:css && npm run lint:js",
@@ -33,6 +36,7 @@
 		"lint:js": "eslint --max-warnings 0",
 		"lint:js:fix": "npm run lint:js -- --fix",
 		"prepare": "husky",
+		"preview": "astro preview",
 		"test": "npm run format:check && npm run lint"
 	},
 	"lint-staged": {
@@ -48,14 +52,20 @@
 			"prettier --write --ignore-unknown"
 		]
 	},
+	"dependencies": {
+		"astro": "5.1.9"
+	},
 	"devDependencies": {
 		"@eslint/js": "9.18.0",
 		"eslint": "9.18.0",
 		"globals": "15.14.0",
 		"husky": "9.1.7",
 		"lint-staged": "15.4.1",
+		"postcss-html": "1.8.0",
 		"prettier": "3.4.2",
+		"prettier-plugin-astro": "0.14.1",
 		"stylelint": "16.13.2",
+		"stylelint-config-html": "1.1.0",
 		"stylelint-config-recess-order": "6.0.0",
 		"stylelint-config-standard": "37.0.0",
 		"stylelint-plugin-defensive-css": "1.0.4"

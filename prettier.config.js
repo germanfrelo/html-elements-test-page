@@ -5,12 +5,19 @@
  * @type {import("prettier").Config}
  */
 const config = {
+	plugins: ["prettier-plugin-astro"], // Ref: https://docs.astro.build/en/editor-setup/#prettier
 	quoteProps: "consistent",
 	overrides: [
 		{
-			files: ["*.css", "*.html"],
+			files: "*.astro",
 			options: {
-				printWidth: 9999,
+				parser: "astro",
+			},
+		},
+		{
+			files: ["*.astro", "*.css", "*.html"],
+			options: {
+				printWidth: Number.POSITIVE_INFINITY,
 			},
 		},
 		{

@@ -1,6 +1,7 @@
 /** @type {import('stylelint').Config} */
 export default {
 	extends: [
+		"stylelint-config-html/astro", // Provides Astro support
 		// The order of configs is important: later configs take precedence over earlier ones
 		"stylelint-config-standard", // Extends stylelint-config-recommended and turns on additional rules to enforce modern conventions
 		"stylelint-config-recess-order", // Sorts CSS properties

@@ -1,6 +1,6 @@
 # HTML elements test page
 
-[![pages-build-deployment](https://github.com/germanfrelo/html-elements-test-page/actions/workflows/pages/pages-build-deployment/badge.svg?branch=main)](https://github.com/germanfrelo/html-elements-test-page/actions/workflows/pages/pages-build-deployment)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d59ceb7d-1128-452b-9642-a46347594d26/deploy-status)](https://app.netlify.com/sites/html5-elements-test-page/deploys)
 
 > [!NOTE]
 > This is a **work in progress**.

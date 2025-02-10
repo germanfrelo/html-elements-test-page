@@ -10,23 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
 			.setAttribute("href", styleSheetHref);
 	});
 
-	// Toggle Color Scheme
-
-	const btnColorScheme = document.querySelector("#btnColorScheme");
-	const colorScheme = document.querySelector('meta[name="color-scheme"]');
-
-	btnColorScheme.addEventListener("click", () => {
-		if (colorScheme) {
-			if (colorScheme.content === "dark") {
-				colorScheme.content = "light";
-			} else {
-				if ((colorScheme.content = "light")) {
-					colorScheme.content = "dark";
-				}
-			}
-		}
-	});
-
 	// Show and close the modal dialog
 
 	const dialog = document.querySelector("#gfl-dialog");

@@ -6,401 +6,385 @@
 		<title>Modern, up-to-date HTML5 Elements Test Page</title>
 		<meta name="description" content="An up-to-date test page filled with common HTML elements to be used to provide visual feedback whilst building CSS systems and frameworks." />
 		<meta name="color-scheme" content="" />
-		<link rel="stylesheet" href="assets/css/index.css" />
 		<link rel="stylesheet" href="" id="customStyleSheet" />
+		<link rel="stylesheet" href="assets/css/index.css" />
 		<script src="assets/js/index.js"></script>
 	</head>
 
 	<body>
-		<header>
+		<header class="gfl-page-header">
 			<a href="#content" class="gfl-skip-link">Skip to content</a>
 
-			<div class="gfl-flow">
-				<h1 class="gfl-heading">HTML5 Elements Test Page</h1>
+			<h1 class="gfl-heading">HTML5 Elements Test Page</h1>
 
-				<!-- Intro -->
-				<div id="gfl-intro">
-					<p>This is a test page filled with common HTML elements to be used to provide visual feedback whilst building CSS systems and frameworks.</p>
+			<p>This is a test page filled with common HTML elements to be used to provide visual feedback whilst building CSS systems and frameworks.</p>
 
-					<details>
-						<summary>Omitted HTML elements</summary>
+			<details>
+				<summary>Omitted HTML elements</summary>
+				<ul>
+					<li><code>html</code></li>
+					<li>
+						Document metadata:
 						<ul>
-							<li><code>html</code></li>
-							<li>
-								Document metadata:
-								<ul>
-									<li><code>base</code></li>
-									<li><code>header</code></li>
-									<li><code>link</code></li>
-									<li><code>meta</code></li>
-									<li><code>style</code></li>
-									<li><code>title</code></li>
-								</ul>
-							</li>
-							<li><code>body</code></li>
-							<li><code>article</code></li>
-							<li><code>section</code></li>
-							<li><code>nav</code></li>
-							<li><code>aside</code></li>
+							<li><code>base</code></li>
 							<li><code>header</code></li>
-							<li><code>footer</code></li>
-							<li><code>main</code></li>
-							<li><code>div</code></li>
-							<li><code>script</code></li>
-							<li><code>noscript</code></li>
-							<li><code>template</code></li>
-							<li><code>slot</code></li>
+							<li><code>link</code></li>
+							<li><code>meta</code></li>
+							<li><code>style</code></li>
+							<li><code>title</code></li>
 						</ul>
-					</details>
+					</li>
+					<li><code>body</code></li>
+					<li><code>article</code></li>
+					<li><code>section</code></li>
+					<li><code>nav</code></li>
+					<li><code>aside</code></li>
+					<li><code>header</code></li>
+					<li><code>footer</code></li>
+					<li><code>main</code></li>
+					<li><code>div</code></li>
+					<li><code>script</code></li>
+					<li><code>noscript</code></li>
+					<li><code>template</code></li>
+					<li><code>slot</code></li>
+				</ul>
+			</details>
 
-					<p>It's based on <a target="_blank" href="https://github.com/cbracco/html5-test-page">@cbracco's HTML5 Test Page</a>, but with some improvements:</p>
-					<ul>
-						<li>It's more complete.</li>
-						<li>It's more and frequently up to date (last update: <time datetime="2024-11-24">2024-11-24</time>).</li>
-						<li>Includes references to MDN and the HTML Spec.</li>
-						<li>
-							Elements are grouped and sorted based on the references from
-							<!-- <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">MDN</a>
+			<p>It's based on <a target="_blank" href="https://github.com/cbracco/html5-test-page">@cbracco's HTML5 Test Page</a>, but with some improvements:</p>
+			<ul>
+				<li>It's more complete.</li>
+				<li>It's more and frequently up to date (last update: <time datetime="2024-11-24">2024-11-24</time>).</li>
+				<li>Includes references to MDN and the HTML Spec.</li>
+				<li>
+					Elements are grouped and sorted based on the references from
+					<!-- <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">MDN</a>
 							and -->
-							<a target="_blank" href="https://html.spec.whatwg.org/multipage/#toc-semantics">the HTML Spec</a>, with custom styles to better differentiate every category and element.
+					<a target="_blank" href="https://html.spec.whatwg.org/multipage/#toc-semantics">the HTML Spec</a>, with custom styles to better differentiate every category and element.
+				</li>
+				<li>A button to switch between light and dark color scheme.</li>
+			</ul>
+
+			<!-- Navigation: Table of Contents -->
+			<details>
+				<summary>Table of contents</summary>
+				<nav aria-label="Main Navigation">
+					<ol>
+						<li>
+							<a href="#sections">Sections and Headings</a>
+							<ul>
+								<li>
+									<a href="#headings"><code>h1</code>, <code>h2</code>, <code>h3</code>, <code>h4</code>, <code>h5</code>, <code>h6</code></a>
+								</li>
+								<li>
+									<a href="#hgroup"><code>hgroup</code></a>
+								</li>
+								<li>
+									<a href="#address"><code>address</code></a>
+								</li>
+							</ul>
 						</li>
-						<li>A button to switch between light and dark color scheme.</li>
-					</ul>
-				</div>
-
-				<!-- Navigation: Table of Contents -->
-				<details>
-					<summary>Table of contents</summary>
-					<nav aria-label="Main Navigation" id="gfl-toc">
-						<ol>
-							<li>
-								<a href="#sections">Sections and Headings</a>
-								<ul>
-									<li>
-										<a href="#headings"><code>h1</code>, <code>h2</code>, <code>h3</code>, <code>h4</code>, <code>h5</code>, <code>h6</code></a>
-									</li>
-									<li>
-										<a href="#hgroup"><code>hgroup</code></a>
-									</li>
-									<li>
-										<a href="#address"><code>address</code></a>
-									</li>
-								</ul>
-							</li>
-							<li>
-								<a href="#grouping-content">Grouping content</a>
-								<ul>
-									<li>
-										<a href="#p"><code>p</code></a>
-									</li>
-									<li>
-										<a href="#hr"><code>hr</code></a>
-									</li>
-									<li>
-										<a href="#pre"><code>pre</code></a>
-									</li>
-									<li>
-										<a href="#blockquote"><code>blockquote</code></a>
-									</li>
-									<li>
-										<a href="#ol"><code>ol</code></a>
-									</li>
-									<li>
-										<a href="#ul"><code>ul</code></a>
-									</li>
-									<li>
-										<a href="#menu"><code>menu</code></a>
-									</li>
-									<li>
-										<a href="#dl"><code>dl</code></a>
-									</li>
-									<li>
-										<a href="#figure"><code>figure</code></a>
-									</li>
-									<li>
-										<a href="#search"><code>search</code></a>
-									</li>
-								</ul>
-							</li>
-							<li>
-								<a href="#text-level-semantics">Text-level semantics</a>
-								<ul>
-									<li>
-										<a href="#a"><code>a</code></a>
-									</li>
-									<li>
-										<a href="#em"><code>em</code></a>
-									</li>
-									<li>
-										<a href="#strong"><code>strong</code></a>
-									</li>
-									<li>
-										<a href="#small"><code>small</code></a>
-									</li>
-									<li>
-										<a href="#s"><code>s</code></a>
-									</li>
-									<li>
-										<a href="#cite"><code>cite</code></a>
-									</li>
-									<li>
-										<a href="#q"><code>q</code></a>
-									</li>
-									<li>
-										<a href="#dfn"><code>dfn</code></a>
-									</li>
-									<li>
-										<a href="#abbr"><code>abbr</code></a>
-									</li>
-									<li>
-										<a href="#ruby"><code>ruby</code></a>
-									</li>
-									<li>
-										<a href="#data"><code>data</code></a>
-									</li>
-									<li>
-										<a href="#time"><code>time</code></a>
-									</li>
-									<li>
-										<a href="#code"><code>code</code></a>
-									</li>
-									<li>
-										<a href="#var"><code>var</code></a>
-									</li>
-									<li>
-										<a href="#samp"><code>samp</code></a>
-									</li>
-									<li>
-										<a href="#kbd"><code>kbd</code></a>
-									</li>
-									<li>
-										<a href="#sub"><code>sub</code></a>
-									</li>
-									<li>
-										<a href="#sup"><code>sup</code></a>
-									</li>
-									<li>
-										<a href="#i"><code>i</code></a>
-									</li>
-									<li>
-										<a href="#b"><code>b</code></a>
-									</li>
-									<li>
-										<a href="#u"><code>u</code></a>
-									</li>
-									<li>
-										<a href="#mark"><code>mark</code></a>
-									</li>
-									<li>
-										<a href="#bdi"><code>bdi</code></a>
-									</li>
-									<li>
-										<a href="#bdo"><code>bdo</code></a>
-									</li>
-									<li>
-										<a href="#span"><code>span</code></a>
-									</li>
-									<li>
-										<a href="#br"><code>br</code></a>
-									</li>
-									<li>
-										<a href="#wbr"><code>wbr</code></a>
-									</li>
-								</ul>
-							</li>
-							<li>
-								<a href="#edits">Edits</a>
-								<ul>
-									<li>
-										<a href="#del-ins"><code>del</code>, <code>ins</code></a>
-									</li>
-								</ul>
-							</li>
-							<li>
-								<a href="#embedded-content">Embedded content</a>
-								<ul>
-									<li>
-										<a href="#picture"><code>picture</code></a>
-									</li>
-									<li>
-										<a href="#source"><code>source</code></a>
-									</li>
-									<li>
-										<a href="#img"><code>img</code></a>
-									</li>
-									<li>
-										<a href="#iframe"><code>iframe</code></a>
-									</li>
-									<li>
-										<a href="#embed"><code>embed</code></a>
-									</li>
-									<li>
-										<a href="#object"><code>object</code></a>
-									</li>
-									<li>
-										<a href="#video"><code>video</code></a>
-									</li>
-									<li>
-										<a href="#audio"><code>audio</code></a>
-									</li>
-									<li>
-										<a href="#map-area"><code>map</code>, <code>area</code></a>
-									</li>
-									<li>
-										<a href="#math"><code>math</code></a>
-									</li>
-									<li>
-										<a href="#svg"><code>svg</code></a>
-									</li>
-								</ul>
-							</li>
-							<li>
-								<a href="#tabular-data">Tabular data</a>
-								<ul>
-									<li>
-										<a href="#table"><code>table</code> (+ <code>caption</code>, <code>colgroup</code>, <code>col</code>, <code>tbody</code>, <code>thead</code>, <code>tfoot</code>, <code>tr</code>, <code>td</code>, <code>th</code>)</a>
-									</li>
-								</ul>
-							</li>
-							<li>
-								<a href="#forms">Forms</a>
-								<ul>
-									<li>
-										<a href="#fieldset-legend"><code>fieldset</code>, <code>legend</code></a>
-									</li>
-									<li>
-										<a href="#label"><code>label</code></a>
-									</li>
-									<li>
-										<a href="#input"><code>input</code></a>
-									</li>
-									<li>
-										<a href="#button"><code>button</code></a>
-									</li>
-									<li>
-										<a href="#select"><code>select</code>, <code>option</code>, <code>optgroup</code></a>
-									</li>
-									<li>
-										<a href="#datalist"><code>datalist</code></a>
-									</li>
-									<li>
-										<a href="#textarea"><code>textarea</code></a>
-									</li>
-									<li>
-										<a href="#output"><code>output</code></a>
-									</li>
-									<li>
-										<a href="#progress"><code>progress</code></a>
-									</li>
-									<li>
-										<a href="#meter"><code>meter</code></a>
-									</li>
-								</ul>
-							</li>
-							<li>
-								<a href="#interactive-elements">Interactive elements</a>
-								<ul>
-									<li>
-										<a href="#details"><code>details</code></a>
-									</li>
-									<li>
-										<a href="#dialog"><code>dialog</code></a>
-									</li>
-								</ul>
-							</li>
-							<li>
-								<a href="#scripting">Scripting</a>
-								<ul>
-									<li>
-										<a href="#canvas"><code>canvas</code></a>
-									</li>
-								</ul>
-							</li>
-						</ol>
-					</nav>
-				</details>
-
-				<!-- Compare Style Sheets -->
-
-				<details>
-					<summary>Compare Style Sheets</summary>
-					<form id="formChangeStyleSheet">
-						<fieldset>
-							<legend>More conservative</legend>
-							<div class="gfl-buttons">
-								<label>
-									<input type="radio" name="stylesheet" value="" checked /> Browser's Default Styles
-									<span>(<a rel="external" href="https://meiert.com/en/blog/user-agent-style-sheets/">source</a>)</span>
-								</label>
-
-								<label>
-									<input type="radio" name="stylesheet" value="https://germanfrelo.github.io/base-css-stylesheet/base.css" /> @germanfrelo/base.css
-									<span>(<a rel="external" href="https://github.com/germanfrelo/base-css-stylesheet">source</a>)</span>
-								</label>
-
-								<label>
-									<input type="radio" name="stylesheet" value="https://unpkg.com/@csstools/normalize.css" /> @csstools/normalize.css
-									<span>(<a rel="external" href="https://github.com/csstools/normalize.css">source</a>)</span>
-								</label>
-
-								<label>
-									<input type="radio" name="stylesheet" value="https://cdn.skypack.dev/sanitize.css" /> @csstools/sanitize.css
-									<span>(<a rel="external" href="https://github.com/csstools/sanitize.css/">source</a>)</span>
-								</label>
-
-								<label>
-									<input type="radio" name="stylesheet" value="https://unpkg.com/modern-normalize@3.0.1/modern-normalize.css" /> @sindresorhus/modern-normalize
-									<span>(<a rel="external" href="https://github.com/sindresorhus/modern-normalize">source</a>)</span>
-								</label>
-
-								<label>
-									<input type="radio" name="stylesheet" value="assets/css/andy-bell-css-reset.css" /> Andy Bell's CSS Reset
-									<span>(<a rel="external" href="https://piccalil.li/blog/a-more-modern-css-reset/">source</a>)</span>
-								</label>
-
-								<label>
-									<input type="radio" name="stylesheet" value="assets/css/css-remedy.css" /> CSS Remedy
-									<span>(<a rel="external" href="https://github.com/jensimmons/cssremedy">source</a>)</span>
-								</label>
-
-								<label>
-									<input type="radio" name="stylesheet" value="assets/css/joshwcomeau-css-reset.css" /> Josh W. Comeau's CSS Reset
-									<span>(<a rel="external" href="https://www.joshwcomeau.com/css/custom-css-reset/">source</a>)</span>
-								</label>
-							</div>
-						</fieldset>
-
-						<fieldset>
-							<legend>More aggressive</legend>
-							<div class="gfl-buttons">
-								<label>
-									<input type="radio" name="stylesheet" value="https://unpkg.com/tailwindcss@3.4.15/src/css/preflight.css" /> @tailwindcss/preflight@3.4.15
-									<span>(<a rel="external" href="https://tailwindcss.com/docs/preflight">source</a>)</span>
-								</label>
-
-								<label>
-									<input type="radio" name="stylesheet" value="./assets/css/elad-shechter-css-reset.css" /> @elad2412/the-new-css-reset
-									<span>(<a rel="external" href="https://github.com/elad2412/the-new-css-reset">source</a>)</span>
-								</label>
-
-								<label>
-									<input type="radio" name="stylesheet" value="https://unpkg.com/open-props/normalize.min.css" /> @argyleink/open-props' Normalize
-									<span>(<a rel="external" href="https://github.com/argyleink/open-props">source</a>)</span>
-								</label>
-							</div>
-						</fieldset>
-					</form>
-				</details>
-
-				<!-- Compare Color Schemes -->
-				<fieldset id="compare-themes">
-					<legend>Compare Color Schemes</legend>
-					<button id="btnColorScheme" type="button">Toggle Color Scheme</button>
-				</fieldset>
-			</div>
+						<li>
+							<a href="#grouping-content">Grouping content</a>
+							<ul>
+								<li>
+									<a href="#p"><code>p</code></a>
+								</li>
+								<li>
+									<a href="#hr"><code>hr</code></a>
+								</li>
+								<li>
+									<a href="#pre"><code>pre</code></a>
+								</li>
+								<li>
+									<a href="#blockquote"><code>blockquote</code></a>
+								</li>
+								<li>
+									<a href="#ol"><code>ol</code></a>
+								</li>
+								<li>
+									<a href="#ul"><code>ul</code></a>
+								</li>
+								<li>
+									<a href="#menu"><code>menu</code></a>
+								</li>
+								<li>
+									<a href="#dl"><code>dl</code></a>
+								</li>
+								<li>
+									<a href="#figure"><code>figure</code></a>
+								</li>
+								<li>
+									<a href="#search"><code>search</code></a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#text-level-semantics">Text-level semantics</a>
+							<ul>
+								<li>
+									<a href="#a"><code>a</code></a>
+								</li>
+								<li>
+									<a href="#em"><code>em</code></a>
+								</li>
+								<li>
+									<a href="#strong"><code>strong</code></a>
+								</li>
+								<li>
+									<a href="#small"><code>small</code></a>
+								</li>
+								<li>
+									<a href="#s"><code>s</code></a>
+								</li>
+								<li>
+									<a href="#cite"><code>cite</code></a>
+								</li>
+								<li>
+									<a href="#q"><code>q</code></a>
+								</li>
+								<li>
+									<a href="#dfn"><code>dfn</code></a>
+								</li>
+								<li>
+									<a href="#abbr"><code>abbr</code></a>
+								</li>
+								<li>
+									<a href="#ruby"><code>ruby</code></a>
+								</li>
+								<li>
+									<a href="#data"><code>data</code></a>
+								</li>
+								<li>
+									<a href="#time"><code>time</code></a>
+								</li>
+								<li>
+									<a href="#code"><code>code</code></a>
+								</li>
+								<li>
+									<a href="#var"><code>var</code></a>
+								</li>
+								<li>
+									<a href="#samp"><code>samp</code></a>
+								</li>
+								<li>
+									<a href="#kbd"><code>kbd</code></a>
+								</li>
+								<li>
+									<a href="#sub"><code>sub</code></a>
+								</li>
+								<li>
+									<a href="#sup"><code>sup</code></a>
+								</li>
+								<li>
+									<a href="#i"><code>i</code></a>
+								</li>
+								<li>
+									<a href="#b"><code>b</code></a>
+								</li>
+								<li>
+									<a href="#u"><code>u</code></a>
+								</li>
+								<li>
+									<a href="#mark"><code>mark</code></a>
+								</li>
+								<li>
+									<a href="#bdi"><code>bdi</code></a>
+								</li>
+								<li>
+									<a href="#bdo"><code>bdo</code></a>
+								</li>
+								<li>
+									<a href="#span"><code>span</code></a>
+								</li>
+								<li>
+									<a href="#br"><code>br</code></a>
+								</li>
+								<li>
+									<a href="#wbr"><code>wbr</code></a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#edits">Edits</a>
+							<ul>
+								<li>
+									<a href="#del-ins"><code>del</code>, <code>ins</code></a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#embedded-content">Embedded content</a>
+							<ul>
+								<li>
+									<a href="#picture"><code>picture</code></a>
+								</li>
+								<li>
+									<a href="#source"><code>source</code></a>
+								</li>
+								<li>
+									<a href="#img"><code>img</code></a>
+								</li>
+								<li>
+									<a href="#iframe"><code>iframe</code></a>
+								</li>
+								<li>
+									<a href="#embed"><code>embed</code></a>
+								</li>
+								<li>
+									<a href="#object"><code>object</code></a>
+								</li>
+								<li>
+									<a href="#video"><code>video</code></a>
+								</li>
+								<li>
+									<a href="#audio"><code>audio</code></a>
+								</li>
+								<li>
+									<a href="#map-area"><code>map</code>, <code>area</code></a>
+								</li>
+								<li>
+									<a href="#math"><code>math</code></a>
+								</li>
+								<li>
+									<a href="#svg"><code>svg</code></a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#tabular-data">Tabular data</a>
+							<ul>
+								<li>
+									<a href="#table"><code>table</code> (+ <code>caption</code>, <code>colgroup</code>, <code>col</code>, <code>tbody</code>, <code>thead</code>, <code>tfoot</code>, <code>tr</code>, <code>td</code>, <code>th</code>)</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#forms">Forms</a>
+							<ul>
+								<li>
+									<a href="#fieldset-legend"><code>fieldset</code>, <code>legend</code></a>
+								</li>
+								<li>
+									<a href="#label"><code>label</code></a>
+								</li>
+								<li>
+									<a href="#input"><code>input</code></a>
+								</li>
+								<li>
+									<a href="#button"><code>button</code></a>
+								</li>
+								<li>
+									<a href="#select"><code>select</code>, <code>option</code>, <code>optgroup</code></a>
+								</li>
+								<li>
+									<a href="#datalist"><code>datalist</code></a>
+								</li>
+								<li>
+									<a href="#textarea"><code>textarea</code></a>
+								</li>
+								<li>
+									<a href="#output"><code>output</code></a>
+								</li>
+								<li>
+									<a href="#progress"><code>progress</code></a>
+								</li>
+								<li>
+									<a href="#meter"><code>meter</code></a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#interactive-elements">Interactive elements</a>
+							<ul>
+								<li>
+									<a href="#details"><code>details</code></a>
+								</li>
+								<li>
+									<a href="#dialog"><code>dialog</code></a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#scripting">Scripting</a>
+							<ul>
+								<li>
+									<a href="#canvas"><code>canvas</code></a>
+								</li>
+							</ul>
+						</li>
+					</ol>
+				</nav>
+			</details>
 		</header>
 
 		<main id="content" tabindex="-1">
+			<section class="gfl-menu-container">
+				<h2 class="visually-hidden">Compare style sheets and color schemes</h2>
+
+				<div class="gfl-repel">
+					<!-- Compare Style Sheets -->
+					<details>
+						<summary>Compare Style Sheets</summary>
+						<form id="formChangeStyleSheet">
+							<label>
+								<input type="radio" name="stylesheet" value="" checked /> Browser's Default Styles
+								<span>(<a rel="external" href="https://meiert.com/en/blog/user-agent-style-sheets/">source</a>)</span>
+							</label>
+							<label>
+								<input type="radio" name="stylesheet" value="https://germanfrelo.github.io/base-css-stylesheet/base.css" /> @germanfrelo/base.css
+								<span>(<a rel="external" href="https://github.com/germanfrelo/base-css-stylesheet">source</a>)</span>
+							</label>
+							<label>
+								<input type="radio" name="stylesheet" value="https://unpkg.com/@csstools/normalize.css" /> @csstools/normalize.css
+								<span>(<a rel="external" href="https://github.com/csstools/normalize.css">source</a>)</span>
+							</label>
+							<label>
+								<input type="radio" name="stylesheet" value="https://cdn.skypack.dev/sanitize.css" /> @csstools/sanitize.css
+								<span>(<a rel="external" href="https://github.com/csstools/sanitize.css/">source</a>)</span>
+							</label>
+							<label>
+								<input type="radio" name="stylesheet" value="https://unpkg.com/modern-normalize@3.0.1/modern-normalize.css" /> @sindresorhus/modern-normalize
+								<span>(<a rel="external" href="https://github.com/sindresorhus/modern-normalize">source</a>)</span>
+							</label>
+							<label>
+								<input type="radio" name="stylesheet" value="assets/css/andy-bell-css-reset.css" /> Andy Bell's CSS Reset
+								<span>(<a rel="external" href="https://piccalil.li/blog/a-more-modern-css-reset/">source</a>)</span>
+							</label>
+							<label>
+								<input type="radio" name="stylesheet" value="assets/css/css-remedy.css" /> CSS Remedy
+								<span>(<a rel="external" href="https://github.com/jensimmons/cssremedy">source</a>)</span>
+							</label>
+							<label>
+								<input type="radio" name="stylesheet" value="assets/css/joshwcomeau-css-reset.css" /> Josh W. Comeau's CSS Reset
+								<span>(<a rel="external" href="https://www.joshwcomeau.com/css/custom-css-reset/">source</a>)</span>
+							</label>
+							<label>
+								<input type="radio" name="stylesheet" value="https://unpkg.com/tailwindcss@3.4.15/src/css/preflight.css" /> @tailwindcss/preflight@3.4.15
+								<span>(<a rel="external" href="https://tailwindcss.com/docs/preflight">source</a>)</span>
+							</label>
+							<label>
+								<input type="radio" name="stylesheet" value="./assets/css/elad-shechter-css-reset.css" /> @elad2412/the-new-css-reset
+								<span>(<a rel="external" href="https://github.com/elad2412/the-new-css-reset">source</a>)</span>
+							</label>
+							<label>
+								<input type="radio" name="stylesheet" value="https://unpkg.com/open-props/normalize.min.css" /> @argyleink/open-props' Normalize
+								<span>(<a rel="external" href="https://github.com/argyleink/open-props">source</a>)</span>
+							</label>
+						</form>
+					</details>
+
+					<!-- Compare Color Schemes -->
+					<details>
+						<summary>Compare Color Schemes</summary>
+						<form id="gfl-theme-picker">
+							<label> <input type="radio" name="theme" value="system" /> System </label>
+							<label> <input type="radio" name="theme" value="light" /> Light </label>
+							<label> <input type="radio" name="theme" value="dark" /> Dark </label>
+						</form>
+					</details>
+				</div>
+			</section>
+
 			<!-- Sections -->
 			<div id="sections" class="gfl-category-container">
 				<h2 class="gfl-heading gfl-category-name">Sections and Headings</h2>

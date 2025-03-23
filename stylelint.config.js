@@ -19,6 +19,8 @@ export default {
 			true, // Already enabled in stylelint-config-recommended
 			{ severity: "warning" }, // Default is 'error', but I prefer 'warning'
 		],
+		// Invalid
+		"syntax-string-no-invalid": true,
 		// Unknown
 		"no-unknown-animations": true,
 		"no-unknown-custom-media": true,

@@ -32,9 +32,7 @@ export default {
 		// Empty lines
 		"declaration-empty-line-before": "never",
 		// Pattern
-		"custom-media-pattern": null,
 		"custom-property-pattern": null,
-		"keyframes-name-pattern": null,
 		"selector-class-pattern": null,
 		"selector-id-pattern": null,
 		// Redundant

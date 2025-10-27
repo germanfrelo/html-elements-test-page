@@ -17,7 +17,7 @@ export default {
 		// Descending
 		"no-descending-specificity": [
 			true, // Already enabled in stylelint-config-recommended
-			{ severity: "warning" }, // Default is 'error', but I prefer 'warning'
+			{ severity: "warning" }, // Relax the default 'error' severity level because this rule has limitations
 		],
 		// Invalid
 		"syntax-string-no-invalid": true,
@@ -30,7 +30,16 @@ export default {
 		(overrides rules from stylelint-config-standard)
 		---------------------------------------- */
 		// Empty lines
+		"comment-empty-line-before": null,
 		"declaration-empty-line-before": "never",
+		// Max & min
+		"max-nesting-depth": [
+			4,
+			{
+				severity: "warning",
+				ignore: ["blockless-at-rules", "pseudo-classes"],
+			},
+		],
 		// Pattern
 		"custom-property-pattern": null,
 		"selector-class-pattern": null,
@@ -46,12 +55,18 @@ export default {
 				"severity": "warning",
 				"accidental-hover": false,
 				"background-repeat": true,
-				"custom-property-fallbacks": true,
-				"flex-wrapping": true,
+				"custom-property-fallbacks": false,
+				"flex-wrapping": false,
 				"scroll-chaining": true,
 				"scrollbar-gutter": false,
 				"vendor-prefix-grouping": true,
 			},
 		],
 	},
+	ignoreFiles: [
+		// See https://stylelint.io/user-guide/configure#ignorefiles
+		"**/*.min.*",
+		"dist/",
+		"node_modules/",
+	],
 };

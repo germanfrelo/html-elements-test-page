@@ -969,166 +969,184 @@ A leaflet.
 				<div class="element">
 					<!-- type="hidden" -->
 					<div class="element-type">
-						<label for="form-input-hidden">hidden</label>
+						<label for="form-input-hidden">Hidden</label>
 						<input type="hidden" id="form-input-hidden" name="hidden-name" value="hidden-value" />
 					</div>
 
 					<!-- type="text" -->
 					<div class="element-type">
-						<label for="form-input-text">text</label>
-						<input type="text" id="form-input-text" placeholder="Placeholder" />
+						<label for="form-input-text">Text</label>
+						<input type="text" id="form-input-text" placeholder="Placeholder text" />
 					</div>
 
-					<!-- type="search" -->
+					<!-- type="text" disabled -->
 					<div class="element-type">
-						<label for="form-input-search">search</label>
-						<input type="search" id="form-input-search" placeholder="Placeholder" />
+						<label for="form-input-text-disabled">Text (disabled)</label>
+						<input type="text" id="form-input-text-disabled" placeholder="This input is disabled" disabled />
 					</div>
 
-					<!-- type="tel" -->
+					<!-- type="text" readonly -->
 					<div class="element-type">
-						<label for="form-input-tel">tel</label>
-						<input type="tel" id="form-input-tel" placeholder="Placeholder" />
+						<label for="form-input-text-readonly">Text (readonly)</label>
+						<input type="text" id="form-input-text-readonly" value="Some read-only text" readonly />
 					</div>
 
 					<!-- type="url" -->
 					<div class="element-type">
-						<label for="form-input-url">url</label>
-						<input type="url" id="form-input-url" placeholder="Placeholder" />
+						<label for="form-input-url">URL</label>
+						<input type="url" id="form-input-url" placeholder="e.g. https://example.com" />
 					</div>
 
 					<!-- type="email" -->
 					<div class="element-type">
-						<label for="form-input-email">email</label>
-						<input type="email" id="form-input-email" placeholder="Placeholder" />
+						<label for="form-input-email">Email address</label>
+						<input type="email" id="form-input-email" placeholder="e.g. name@domain.com" />
+					</div>
+
+					<!-- type="email" multiple -->
+					<div class="element-type">
+						<label for="form-input-email-multiple">Email addresses</label>
+						<input type="email" id="form-input-email-multiple" multiple placeholder="e.g. name1@domain1.com, name2@domain2.com" />
 					</div>
 
 					<!-- type="password" -->
 					<div class="element-type">
-						<label for="form-input-password">password</label>
-						<input type="password" id="form-input-password" placeholder="Placeholder" />
+						<label for="form-input-password">Password</label>
+						<input type="password" id="form-input-password" />
 					</div>
 
-					<!-- type="date" -->
+					<!-- type="tel" -->
 					<div class="element-type">
-						<label for="form-input-date">date</label>
-						<input type="date" id="form-input-date" value="1970-01-01" />
-					</div>
-
-					<!-- type="month" -->
-					<div class="element-type">
-						<label for="form-input-month">month</label>
-						<input type="month" id="form-input-month" value="1970-01" />
-					</div>
-
-					<!-- type="week" -->
-					<div class="element-type">
-						<label for="form-input-week">week</label>
-						<input type="week" id="form-input-week" value="1970-W01" />
-					</div>
-
-					<!-- type="time" -->
-					<div class="element-type">
-						<label for="form-input-time">time</label>
-						<input type="time" id="form-input-time" min="09:00" max="18:00" />
-					</div>
-
-					<!-- type="datetime-local" -->
-					<div class="element-type">
-						<label for="form-input-datetime-local">datetime-local</label>
-						<input type="datetime-local" id="form-input-datetime-local" value="1970-01-01T00:00" />
+						<label for="form-input-tel">Telephone number</label>
+						<input type="tel" id="form-input-tel" placeholder="e.g. 01234 567890" />
 					</div>
 
 					<!-- type="number" -->
 					<div class="element-type">
-						<label for="form-input-number">number</label>
+						<label for="form-input-number">Number</label>
 						<input type="number" id="form-input-number" placeholder="Placeholder" />
 					</div>
 
-					<!-- type="range" -->
+					<!-- type="search" -->
 					<div class="element-type">
-						<label for="form-input-range">range</label>
-						<input type="range" id="form-input-range" />
+						<label for="form-input-search">Search</label>
+						<input type="search" id="form-input-search" placeholder="Search…" />
+					</div>
+
+					<!-- type="datetime-local" -->
+					<div class="element-type">
+						<label for="form-input-datetime-local">Date and time</label>
+						<input type="datetime-local" id="form-input-datetime-local" />
+					</div>
+
+					<!-- type="date" -->
+					<div class="element-type">
+						<label for="form-input-date">Date</label>
+						<input type="date" id="form-input-date" value="1993-04-30" />
+					</div>
+
+					<!-- type="month" -->
+					<div class="element-type">
+						<label for="form-input-month">Month</label>
+						<input type="month" id="form-input-month" value="1993-04" />
+					</div>
+
+					<!-- type="week" -->
+					<div class="element-type">
+						<label for="form-input-week">Week</label>
+						<input type="week" id="form-input-week" value="1993-W17" />
+					</div>
+
+					<!-- type="time" -->
+					<div class="element-type">
+						<label for="form-input-time">Time</label>
+						<input type="time" id="form-input-time" />
 					</div>
 
 					<!-- type="color" -->
 					<div class="element-type">
-						<label for="form-input-color">color</label>
+						<label for="form-input-color">Color</label>
 						<input type="color" id="form-input-color" />
+					</div>
+
+					<!-- type="range" -->
+					<div class="element-type">
+						<label for="form-input-range">Range</label>
+						<input type="range" id="form-input-range" />
 					</div>
 
 					<!-- type="checkbox" -->
 					<div class="element-type">
-						<b>checkbox</b>
-						<div>
+						<fieldset>
+							<legend>Checkboxes</legend>
 							<label for="form-input-checkbox-1">
 								<input type="checkbox" id="form-input-checkbox-1" name="checkbox-1-name" value="checkbox-1-value" checked="checked" />
-								Choice 1
+								<span>Checkbox number one</span>
 							</label>
 							<label for="form-input-checkbox-2">
 								<input type="checkbox" id="form-input-checkbox-2" name="checkbox-2-name" value="checkbox-2-value" />
-								Choice 2
+								<span>Checkbox number two has a longer label to test text wrapping</span>
 							</label>
 							<label for="form-input-checkbox-3">
-								<input type="checkbox" id="form-input-checkbox-3" name="checkbox-3-name" value="checkbox-3-value" />
-								Choice 3
+								<input type="checkbox" id="form-input-checkbox-3" name="checkbox-3-name" value="checkbox-3-value" disabled />
+								<span>Checkbox number three is disabled and cant’t be checked</span>
 							</label>
-						</div>
+						</fieldset>
 					</div>
 
 					<!-- type="radio" -->
 					<div class="element-type">
-						<b>radio</b>
-						<div>
+						<fieldset>
+							<legend>Radio buttons</legend>
 							<label for="form-input-radio-1">
 								<input type="radio" id="form-input-radio-1" name="radio-name" value="radio-1-value" />
-								Choice A
+								<span>Option 1</span>
 							</label>
 							<label for="form-input-radio-2">
 								<input type="radio" id="form-input-radio-2" name="radio-name" value="radio-2-value" />
-								Choice B
+								<span>Option 2 should de-select option 1</span>
 							</label>
 							<label for="form-input-radio-3">
-								<input type="radio" id="form-input-radio-3" name="radio-name" value="radio-3-value" />
-								Choice C
+								<input type="radio" id="form-input-radio-3" name="radio-name" value="radio-3-value" disabled />
+								<span>This one is disabled and can’t be selected</span>
 							</label>
-						</div>
+						</fieldset>
 					</div>
 
 					<!-- type="file" -->
 					<div class="element-type">
-						<label for="form-input-file-single">file</label>
+						<label for="form-input-file-single">File</label>
 						<input type="file" id="form-input-file-single" accept="" />
 					</div>
 
 					<!-- type="file" (multiple) -->
 					<div class="element-type">
-						<label for="form-input-file-multiple">file (multiple)</label>
+						<label for="form-input-file-multiple">File (multiple)</label>
 						<input type="file" id="form-input-file-multiple" multiple accept="" />
-					</div>
-
-					<!-- type="submit" -->
-					<div class="element-type">
-						<label for="form-input-submit">submit</label>
-						<input type="submit" id="form-input-submit" />
-					</div>
-
-					<!-- type="image" -->
-					<div class="element-type">
-						<label for="form-input-image">image</label>
-						<input type="image" alt="Random image for input type image" id="form-input-image" src="https://picsum.photos/80/40" />
-					</div>
-
-					<!-- type="reset" -->
-					<div class="element-type">
-						<label for="form-input-reset">reset</label>
-						<input type="reset" id="form-input-reset" />
 					</div>
 
 					<!-- type="button" -->
 					<div class="element-type">
-						<label for="form-input-button">button</label>
+						<label for="form-input-button">Button</label>
 						<input type="button" id="form-input-button" value="input type='button'" />
+					</div>
+
+					<!-- type="submit" -->
+					<div class="element-type">
+						<label for="form-input-submit">Submit</label>
+						<input type="submit" id="form-input-submit" />
+					</div>
+
+					<!-- type="reset" -->
+					<div class="element-type">
+						<label for="form-input-reset">Reset</label>
+						<input type="reset" id="form-input-reset" />
+					</div>
+
+					<!-- type="image" -->
+					<div class="element-type">
+						<label for="form-input-image">Image</label>
+						<input type="image" alt="Random image for input type image" id="form-input-image" src="https://picsum.photos/80/40" />
 					</div>
 				</div>
 			</div>
@@ -1140,56 +1158,56 @@ A leaflet.
 				<div class="element">
 					<!-- type="button" -->
 					<div class="element-type">
-						<label>&lt;button type=button&gt;</label>
-						<button type="button">&lt;button type=button&gt;</button>
+						<label>Button type Button</label>
+						<button type="button">button type=button</button>
 					</div>
 
 					<!-- type="submit" -->
 					<div class="element-type">
-						<label>&lt;button type=submit&gt;</label>
-						<button type="submit">&lt;button type=submit&gt;</button>
+						<label>Button type Submit</label>
+						<button type="submit">button type=submit</button>
 					</div>
 
 					<!-- type="reset" -->
 					<div class="element-type">
-						<label>&lt;button type=reset&gt;</label>
-						<button type="reset">&lt;button type=reset&gt;</button>
+						<label>Button type Reset</label>
+						<button type="reset">button type=reset</button>
 					</div>
 
 					<!-- disabled -->
 					<div class="element-type">
-						<label>&lt;button disabled&gt;</label>
-						<button disabled>&lt;button disabled&gt;</button>
+						<label>Button (disabled)</label>
+						<button disabled>button disabled</button>
 					</div>
 
 					<!-- aria-busy -->
 					<div class="element-type">
-						<label>&lt;button aria-busy&gt;</label>
-						<button aria-busy="true">&lt;button aria-busy&gt;</button>
+						<label>Button (aria-busy)</label>
+						<button aria-busy="true">button aria-busy</button>
 					</div>
 
 					<!-- aria-disabled -->
 					<div class="element-type">
-						<label>&lt;button aria-disabled&gt;</label>
-						<button aria-disabled="true">&lt;button aria-disabled&gt;</button>
+						<label>Button (aria-disabled)</label>
+						<button aria-disabled="true">button aria-disabled</button>
 					</div>
 
 					<!-- aria-hidden -->
 					<div class="element-type">
-						<label>&lt;button aria-hidden&gt;</label>
-						<button aria-hidden="true">&lt;button aria-hidden&gt;</button>
+						<label>Button (aria-hidden)</label>
+						<button aria-hidden="true">button aria-hidden</button>
 					</div>
 
 					<!-- hidden -->
 					<div class="element-type">
-						<label>&lt;button hidden&gt;</label>
-						<button hidden>&lt;button hidden&gt;</button>
+						<label>Button (hidden)</label>
+						<button hidden>button hidden</button>
 					</div>
 
 					<!-- aria-hidden=false hidden -->
 					<div class="element-type">
-						<label>&lt;button aria-hidden=false hidden&gt;</label>
-						<button aria-hidden="false" hidden>&lt;button aria-hidden=false hidden&gt;</button>
+						<label>Button (aria-hidden=false hidden)</label>
+						<button aria-hidden="false" hidden>button aria-hidden=false hidden</button>
 					</div>
 				</div>
 			</div>
@@ -1211,28 +1229,28 @@ A leaflet.
 
 					<!-- optgroup -->
 					<div class="element-type">
-						<label for="form-select-optgroup">Select with <code>optgroup</code></label>
+						<label for="form-select-optgroup">Select (grouped options)</label>
 						<select id="form-select-optgroup" name="select-optgroup">
-							<optgroup label="Group 1">
-								<option value="select-optgroup-1-option-1">Option A</option>
-								<option value="select-optgroup-1-option-2">Option B</option>
-								<option value="select-optgroup-1-option-3">Option C</option>
+							<optgroup label="Group A">
+								<option value="select-optgroup-a-option-1">Option A1</option>
+								<option value="select-optgroup-a-option-2">Option A2</option>
+								<option value="select-optgroup-a-option-3">Option A3</option>
 							</optgroup>
-							<optgroup label="Group 2">
-								<option value="select-optgroup-2-option-1">Option D</option>
-								<option value="select-optgroup-2-option-2">Option E</option>
-								<option value="select-optgroup-2-option-3">Option F</option>
+							<optgroup label="Group B">
+								<option value="select-optgroup-b-option-1">Option B1</option>
+								<option value="select-optgroup-b-option-2">Option B2</option>
+								<option value="select-optgroup-b-option-3">Option B3</option>
 							</optgroup>
 						</select>
 					</div>
 
 					<!-- multiple -->
 					<div class="element-type">
-						<label for="form-select-multiple">Select with <code>multiple</code></label>
+						<label for="form-select-multiple">Select (multiple options)</label>
 						<select id="form-select-multiple" multiple name="select-multiple">
-							<option value="select-multiple-option-1">Option 1</option>
-							<option value="select-multiple-option-2">Option 2</option>
-							<option value="select-multiple-option-3">Option 3</option>
+							<option value="select-multiple-option-1">Option A</option>
+							<option value="select-multiple-option-2">Option B</option>
+							<option value="select-multiple-option-3">Option C</option>
 						</select>
 					</div>
 				</div>
@@ -1265,6 +1283,13 @@ A leaflet.
 					<div class="element-type">
 						<label for="form-textarea">Textarea</label>
 						<textarea id="form-textarea" placeholder="Placeholder"></textarea>
+					</div>
+				</div>
+
+				<div class="element">
+					<div class="element-type">
+						<label for="form-textarea-rows">Textarea with rows attribute</label>
+						<textarea id="form-textarea-rows" rows="5" placeholder="Placeholder"></textarea>
 					</div>
 				</div>
 			</div>

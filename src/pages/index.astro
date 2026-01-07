@@ -16,27 +16,7 @@ import "../styles/index.css";
 		<title>HTML Elements Test Page</title>
 		<meta name="description" content="A comprehensive test page filled with common HTML5 elements. Use it to provide visual feedback and debug CSS systems, themes, or frameworks." />
 		<meta name="color-scheme" content="light dark" />
-		<link id="stylesheet" rel="stylesheet" href="" />
-
-		<script>
-			document.addEventListener("DOMContentLoaded", () => {
-				const stylesheet = document.querySelector("#stylesheet");
-
-				const changeStyleSheetButtons = document.querySelectorAll("[data-change-stylesheet]");
-
-				changeStyleSheetButtons.forEach((button) => {
-					button.addEventListener("click", () => {
-						const styleSheetHref = button.getAttribute("data-change-stylesheet");
-
-						if (!styleSheetHref) {
-							stylesheet!.setAttribute("href", "");
-						} else {
-							stylesheet!.setAttribute("href", styleSheetHref);
-						}
-					});
-				});
-			});
-		</script>
+		<link id="stylesheet" rel="stylesheet" />
 	</head>
 
 	<body>
@@ -1424,5 +1404,25 @@ A leaflet.
 				</div>
 			</div>
 		</section>
+
+		<script>
+			document.addEventListener("DOMContentLoaded", () => {
+				const stylesheet = document.querySelector("#stylesheet");
+
+				const changeStyleSheetButtons = document.querySelectorAll("[data-change-stylesheet]");
+
+				changeStyleSheetButtons.forEach((button) => {
+					button.addEventListener("click", () => {
+						const styleSheetHref = button.getAttribute("data-change-stylesheet");
+
+						if (!styleSheetHref) {
+							stylesheet!.removeAttribute("href");
+						} else {
+							stylesheet!.setAttribute("href", styleSheetHref);
+						}
+					});
+				});
+			});
+		</script>
 	</body>
 </html>

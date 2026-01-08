@@ -16,7 +16,7 @@ import "../styles/index.css";
 		<title>HTML Elements Test Page</title>
 		<meta name="description" content="A comprehensive test page filled with common HTML5 elements. Use it to provide visual feedback and debug CSS systems, themes, or frameworks." />
 		<meta name="color-scheme" content="light dark" />
-		<style>
+		<style is:global>
 			/* Fix for Lighthouse 'H1UserAgentFontSizeInSection' deprecated API warning */
 			:where(h1) {
 				font-size: 2em;

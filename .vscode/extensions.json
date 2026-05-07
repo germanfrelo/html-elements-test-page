@@ -7,7 +7,6 @@
 		"astro-build.astro-vscode",
 		// Linting
 		"dbaeumer.vscode-eslint",
-		"stylelint.vscode-stylelint",
-		"usernamehw.errorlens"
+		"stylelint.vscode-stylelint"
 	]
 }
